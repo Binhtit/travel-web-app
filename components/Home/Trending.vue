@@ -1,22 +1,19 @@
 <template>
-  <div class="flashsale">
-    <div class="flashsale__wrap container">
+  <div class="trending">
+    <div class="trending__wrap container">
       <div class="title__wrap">
-        <img
-          src="../../assets/images/flashsale/flash-sale.png"
-          alt="flash sale"
-        />
-        <h2 class="title">FLASH SALE</h2>
+        <h2 class="title">TRENDING</h2>
+        <p class="slogan">Những mẫu thời trang nổi bật nhất của chúng tôi</p>
       </div>
       <carousel
         class="clothes__wrap"
-        :perPage="4"
+        :perPage="3"
         :navigationEnabled="true"
         :navigationNextLabel="nextLabel"
         :navigationPrevLabel="prevLabel"
         :paginationEnabled="false"
       >
-        <slide v-for="(item, index) in data_flashsale" :key="index">
+        <slide v-for="(item, index) in data_trending" :key="index">
           <div class="cloth">
             <img :src="item.img" alt="" />
             <p class="name">{{ item.name }}</p>
@@ -43,19 +40,16 @@
           </div>
         </slide>
       </carousel>
-      <button class="see-all">
-        Xem tất cả <img src="../../assets/images/common/arrow.png" alt="" />
-      </button>
     </div>
   </div>
 </template>
 
 <script>
-import { FLASH_SALE } from "../../sources/data";
+import { TRENDING } from "../../sources/data";
 export default {
   data() {
     return {
-      data_flashsale: FLASH_SALE,
+      data_trending: TRENDING,
       nextLabel: '<div class="label--next">></div>',
       prevLabel: '<div class="label--prev"><</div>',
     };
@@ -64,8 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.flashsale {
-  background-color: #f5f5f5;
+.trending {
   padding: 80px 0;
   ::v-deep {
     .label {
@@ -75,7 +68,7 @@ export default {
         top: -70px;
         right: -30px;
         font-weight: 900;
-        background-color: #ffffff;
+        background-color: #f5f5f5;
         border-radius: 50%;
         transition: all 0.3s;
         &:hover {
@@ -88,7 +81,7 @@ export default {
         top: -70px;
         left: -30px;
         font-weight: 900;
-        background-color: #ffffff;
+        background-color: #f5f5f5;
         border-radius: 50%;
         transition: all 0.3s;
         &:hover {
@@ -99,16 +92,18 @@ export default {
   }
   &__wrap {
     .title__wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       margin-bottom: 30px;
       .title {
         font-weight: 600;
         font-size: 32px;
         line-height: 43px;
-        color: #cb1515;
-        margin-left: 5px;
+        margin-bottom: 10px;
+      }
+      .slogan {
+        font-size: 14px;
+        line-height: 21px;
+        color: #7d7d7d;
       }
     }
     .clothes__wrap {
@@ -116,7 +111,7 @@ export default {
       align-items: center;
       margin-bottom: 30px;
       .cloth {
-        width: 255px;
+        width: 350px;
         margin-left: 50%;
         transform: translateX(-50%);
         border-radius: 10px;
@@ -162,8 +157,8 @@ export default {
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border: 1px solid brown;
             margin-right: 5px;
+            border: 1px solid brown;
             transition: all 0.3s;
             &:hover {
               cursor: pointer;
@@ -197,6 +192,9 @@ export default {
           .color--white {
             background-color: white;
           }
+          .color--green {
+            background-color: green;
+          }
         }
         .sale {
           position: absolute;
@@ -215,7 +213,7 @@ export default {
           line-height: 22px;
           padding: 5px;
           position: absolute;
-          top: 210px;
+          top: 305px;
           right: -200px;
           border: 1px solid #ffffff;
           border-radius: 10px;
@@ -228,13 +226,13 @@ export default {
           }
         }
         > select {
-          width: 80px;
+          width: 160px;
           text-align: center;
           font-size: 14px;
           line-height: 19px;
           color: #cb1515;
           position: absolute;
-          top: 215px;
+          top: 310px;
           left: -100px;
           padding: 5px;
           border: none;
@@ -255,16 +253,15 @@ export default {
           }
         }
         .blur-bg {
-          width: 255px;
-          height: 255px;
+          width: 350px;
+          height: 350px;
           position: absolute;
           top: 0;
           left: 0;
           z-index: 1;
           background-color: #000000;
           opacity: 0;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
+          border-radius: 10px;
         }
       }
     }

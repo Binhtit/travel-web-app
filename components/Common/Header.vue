@@ -3,15 +3,15 @@
     <div class="header__top">
       <div class="top__wrap container">
         <div class="phone__group">
-          <img src="../../assets/images/phone.png" alt="phone_icon" />
+          <img src="../../assets/images/header/phone.png" alt="phone_icon" />
           <p class="phone">0962.180.180</p>
         </div>
         <div class="mail__group">
-          <img src="../../assets/images/mail.png" alt="mail_icon" />
+          <img src="../../assets/images/header/mail.png" alt="mail_icon" />
           <p class="mail">info@vmms.vn</p>
         </div>
         <div class="time__group">
-          <img src="../../assets/images/clock.png" alt="clock_icon" />
+          <img src="../../assets/images/header/clock.png" alt="clock_icon" />
           <p class="time">
             Mở cửa: Từ 8:00 đến 20:30 (Tất cả các ngày trong tuần)
           </p>
@@ -27,7 +27,7 @@
     <div class="header__mid">
       <div class="mid__wrap container">
         <div class="brand">
-          <img src="../../assets/images/brand.png" alt="logo_brand" />
+          <img src="../../assets/images/header/brand.png" alt="logo_brand" />
         </div>
         <div class="search__group">
           <input
@@ -36,19 +36,19 @@
             placeholder="Nhập từ khóa tìm kiếm..."
           />
           <button class="search__btn">
-            <img src="../../assets/images/search.png" alt="search" />
+            <img src="../../assets/images/header/search.png" alt="search" />
           </button>
         </div>
         <div class="user__group">
           <button class="user__btn">
-            <img src="../../assets/images/user.png" alt="user" />
+            <img src="../../assets/images/header/user.png" alt="user" />
           </button>
           <p class="user">Tài khoản</p>
           <a class="signin-up" href="#">Đăng nhập / Đăng ký</a>
         </div>
         <div class="cart__group">
           <button class="cart__btn">
-            <img src="../../assets/images/cart.png" alt="cart" />
+            <img src="../../assets/images/header/cart.png" alt="cart" />
           </button>
           <p class="cart">Giỏ hàng</p>
           <p class="total-cost">0 đ</p>
@@ -58,7 +58,7 @@
     <div class="header__bot">
       <div class="bot__wrap container">
         <div class="menu__group">
-          <img src="../../assets/images/menu.png" alt="menu" />
+          <img src="../../assets/images/header/menu.png" alt="menu" />
           <p class="menu">Danh mục sản phẩm</p>
         </div>
         <a class="home" href="#">Trang chủ</a>
