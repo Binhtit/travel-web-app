@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h2>thanh</h2>
     <div class="header d-flex align-items-center justify-content-between">
       <div class="header__logo">
         <img
