@@ -28,12 +28,14 @@
 
 <script>
 import { BANNER } from "../../sources/data";
+import arrowLeft from "@imagesCommon/arrow-left.png";
+import arrowRight from "@imagesCommon/arrow-right.png";
 export default {
   data() {
     return {
       data_banner: BANNER,
-      nextLabel: '<div class="label--next">></div>',
-      prevLabel: '<div class="label--prev"><</div>',
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
 };
@@ -72,6 +74,9 @@ export default {
   .slider {
     background-image: url("../../assets/images/banner/banner.png");
     padding: 102px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vw;
     &__wrap {
       .content {
         max-width: 600px;
@@ -93,8 +98,8 @@ export default {
         }
         .describe {
           max-width: 541px;
-          font-size: 14px;
-          line-height: 19px;
+          font-size: 0.9vw;
+          line-height: 1.188vw;
           color: #000000;
           margin: auto;
           margin-bottom: 30px;

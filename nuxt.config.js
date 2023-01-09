@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -14,6 +15,10 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  alias: {
+    '@images': resolve(__dirname, './assets/images'),
+    '@imagesCommon': resolve(__dirname, './assets/images/common')
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],
 
