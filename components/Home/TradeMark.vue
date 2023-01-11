@@ -2,7 +2,7 @@
   <div class="trademark">
     <div class="trademark__list container">
       <h2 class="title">THƯƠNG HIỆU HÀNG ĐẦU</h2>
-      <p class="sub__title">
+      <p class="sub-title">
         Những thương hiệu thời trang nổi tiếng hợp tác với chúng tôi
       </p>
       <carousel
@@ -26,12 +26,14 @@
 
 <script>
 import { TRADEMARK } from "../../sources/data";
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
       data_trademark: TRADEMARK,
-      nextLabel: '<div class="label--next">></div>',
-      prevLabel: '<div class="label--prev"><</div>',
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
 };
@@ -78,7 +80,7 @@ export default {
     text-align: center;
     margin-bottom: 10px;
   }
-  .sub__title {
+  .sub-title {
     font-size: 14px;
     line-height: 19px;
     color: #7d7d7d;

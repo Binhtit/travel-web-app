@@ -11,7 +11,7 @@
           <h2 class="name">{{ item.name }}</h2>
           <p class="describe">{{ item.describe }}</p>
           <button class="buynow">
-            Mua ngay <img src="../../assets/images/common/arrow.png" alt="" />
+            Mua ngay <img src="@images/common/arrow.png" alt="" />
           </button>
         </div>
         <div class="image">
@@ -36,7 +36,7 @@
           <h2 class="name">{{ item.name }}</h2>
           <p class="describe">{{ item.describe }}</p>
           <button class="buynow">
-            Mua ngay <img src="../../assets/images/common/arrow.png" alt="" />
+            Mua ngay <img src="@images/common/arrow.png" alt="" />
           </button>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default {
 .sale-50percent {
   padding-bottom: 80px;
   .banner {
-    background-image: url("../../assets/images/sale50percent/banner.png");
+    background-image: url("@images/sale50percent/banner.png");
     padding: 100px 0;
     text-align: center;
     font-style: italic;

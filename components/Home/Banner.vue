@@ -16,7 +16,7 @@
               <p class="describe">{{ item.describe }}</p>
               <button class="buynow">
                 Mua ngay
-                <img src="../../assets/images/common/arrow.png" alt="arrow" />
+                <img src="@images/common/arrow.png" alt="arrow" />
               </button>
             </div>
           </div>
@@ -28,8 +28,13 @@
 
 <script>
 import { BANNER } from "../../sources/data";
+<<<<<<< HEAD
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
+=======
 import arrowLeft from "@imagesCommon/arrow-left.png";
 import arrowRight from "@imagesCommon/arrow-right.png";
+>>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
 export default {
   data() {
     return {
@@ -72,7 +77,8 @@ export default {
     }
   }
   .slider {
-    background-image: url("../../assets/images/banner/banner.png");
+    background-image: url("@images/banner/banner.png");
+    background-size: cover;
     padding: 102px 0px;
     background-repeat: no-repeat;
     background-size: cover;
