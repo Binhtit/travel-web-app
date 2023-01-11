@@ -26,9 +26,9 @@
     </div>
     <div class="header__mid">
       <div class="mid__wrap container">
-        <div class="brand">
+        <a href="/" class="brand">
           <img src="@images/header/brand.png" alt="logo_brand" />
-        </div>
+        </a>
         <div class="search__group">
           <input
             class="search"
@@ -62,7 +62,7 @@
           <p class="menu">Danh mục sản phẩm</p>
         </div>
         <a class="home" href="#">Trang chủ</a>
-        <a class="aboutus" href="#">Về chúng tôi</a>
+        <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
         <a class="products" href="#">Sản phẩm</a>
         <a class="questions" href="#">Câu hỏi thường gặp</a>
         <a class="support" href="#">Hướng dẫn mua hàng</a>

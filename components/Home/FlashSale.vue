@@ -5,43 +5,7 @@
         <img src="@images/flashsale/flash-sale.png" alt="flash sale" />
         <h2 class="title">FLASH SALE</h2>
       </div>
-      <carousel
-        class="clothes__wrap"
-        :perPage="4"
-        :navigationEnabled="true"
-        :navigationNextLabel="nextLabel"
-        :navigationPrevLabel="prevLabel"
-        :paginationEnabled="false"
-      >
-        <slide v-for="(item, index) in data_flashsale" :key="index">
-          <div class="cloth">
-            <img :src="item.img" alt="" />
-            <p class="name">{{ item.name }}</p>
-            <p class="cost">{{ item.cost }}</p>
-            <div class="choose-color">
-              <div
-                v-for="(color, index) in item.color"
-                :key="index"
-                :class="`color color--${color}`"
-              ></div>
-            </div>
-            <div class="sale">{{ item.sale }}</div>
-            <p class="add">
-              Thêm vào giỏ
-              <img src="@images/common/arrow.png" alt="" />
-            </p>
-            <div class="size">
-              <select>
-                <option value="xs">Size XS</option>
-                <option value="s">Size S</option>
-                <option value="m">Size M</option>
-                <option value="l">Size L</option>
-              </select>
-            </div>
-            <div class="blur-bg"></div>
-          </div>
-        </slide>
-      </carousel>
+      <CommonSlideModel :is-show-label="isShowLabel" :slide-per-view="slidePerView" :slide-data="data_flashsale" />
       <button class="see-all">
         Xem tất cả <img src="@images/common/arrow.png" alt="" />
       </button>
@@ -56,10 +20,17 @@ import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
+      slidePerView: 4,
+      isShowLabel: true,
       data_flashsale: FLASH_SALE,
       nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
       prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
+  },
+  methods: {
+    addList() {
+      this.$store.commit('add', 'new list')
+    }
   },
 };
 </script>
@@ -287,6 +258,23 @@ export default {
         background-color: green;
         color: #ffffff;
       }
+    }
+  }
+}
+.colors {
+  display: flex;
+  column-gap: 8px;
+  .color {
+    width: 15px;
+    height: 15px;
+    &--red {
+      background: red;
+    }
+    &--yellow {
+      background: yellow;
+    }
+    &--black {
+      background: black;
     }
   }
 }

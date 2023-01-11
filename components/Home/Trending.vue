@@ -5,55 +5,20 @@
         <h2 class="title">TRENDING</h2>
         <p class="slogan">Những mẫu thời trang nổi bật nhất của chúng tôi</p>
       </div>
-      <carousel
-        class="clothes__wrap"
-        :perPage="3"
-        :navigationEnabled="true"
-        :navigationNextLabel="nextLabel"
-        :navigationPrevLabel="prevLabel"
-        :paginationEnabled="false"
-      >
-        <slide v-for="(item, index) in data_trending" :key="index">
-          <div class="cloth">
-            <img :src="item.img" alt="" />
-            <p class="name">{{ item.name }}</p>
-            <p class="cost">{{ item.cost }}</p>
-            <div class="choose-color">
-              <div
-                v-for="(color, index) in item.color"
-                :key="index"
-                :class="`color color--${color}`"
-              ></div>
-            </div>
-            <div class="sale">{{ item.sale }}</div>
-            <p class="add">
-              Thêm vào giỏ
-              <img src="@images/common/arrow.png" alt="" />
-            </p>
-            <select class="size">
-              <option value="xs">Size XS</option>
-              <option value="s">Size S</option>
-              <option value="m">Size M</option>
-              <option value="l">Size L</option>
-            </select>
-            <div class="blur-bg"></div>
-          </div>
-        </slide>
-      </carousel>
+      <CommonSlideModel :is-show-label="isShowLabel" :custom-class="customClass" :slide-per-view="slidePerView" :slide-data="data_trending" />
     </div>
   </div>
 </template>
 
 <script>
-import { TRENDING } from "../../sources/data";
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
+import { TRENDING } from "../../sources/data"; //TODO: use alias @Nghia
 export default {
   data() {
     return {
+      slidePerView: 3,
+      isShowLabel: false,
       data_trending: TRENDING,
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      customClass: 'trending-slide'
     };
   },
 };

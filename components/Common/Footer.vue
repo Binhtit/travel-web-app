@@ -1,5 +1,5 @@
 <template lang="">
-  <div></div>
+  <div>Component Footer</div>
 </template>
 <script>
 export default {};
