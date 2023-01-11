@@ -50,7 +50,7 @@ export default {
         border-radius: 50%;
         transition: all 0.3s;
         &:hover {
-          background-color: lightgreen;
+          background-color: green;
         }
       }
       &--next {
