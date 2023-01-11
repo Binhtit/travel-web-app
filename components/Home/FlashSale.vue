@@ -2,10 +2,7 @@
   <div class="flashsale">
     <div class="flashsale__wrap container">
       <div class="title__wrap">
-        <img
-          src="../../assets/images/flashsale/flash-sale.png"
-          alt="flash sale"
-        />
+        <img src="@images/flashsale/flash-sale.png" alt="flash sale" />
         <h2 class="title">FLASH SALE</h2>
       </div>
       <carousel
@@ -31,20 +28,22 @@
             <div class="sale">{{ item.sale }}</div>
             <p class="add">
               Thêm vào giỏ
-              <img src="../../assets/images/common/arrow.png" alt="" />
+              <img src="@images/common/arrow.png" alt="" />
             </p>
-            <select class="size">
-              <option value="xs">Size XS</option>
-              <option value="s">Size S</option>
-              <option value="m">Size M</option>
-              <option value="l">Size L</option>
-            </select>
+            <div class="size">
+              <select>
+                <option value="xs">Size XS</option>
+                <option value="s">Size S</option>
+                <option value="m">Size M</option>
+                <option value="l">Size L</option>
+              </select>
+            </div>
             <div class="blur-bg"></div>
           </div>
         </slide>
       </carousel>
       <button class="see-all">
-        Xem tất cả <img src="../../assets/images/common/arrow.png" alt="" />
+        Xem tất cả <img src="@images/common/arrow.png" alt="" />
       </button>
     </div>
   </div>
@@ -52,12 +51,14 @@
 
 <script>
 import { FLASH_SALE } from "../../sources/data";
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
       data_flashsale: FLASH_SALE,
-      nextLabel: '<div class="label--next">></div>',
-      prevLabel: '<div class="label--prev"><</div>',
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
 };
@@ -130,9 +131,9 @@ export default {
           .add {
             right: 10px;
           }
-          > select {
-            opacity: 1;
+          .size {
             left: 10px;
+            opacity: 1;
           }
           .blur-bg {
             opacity: 0.4;
@@ -201,13 +202,14 @@ export default {
         .sale {
           position: absolute;
           background-color: #cb1515;
-          top: -245px;
+          top: 10px;
           left: 10px;
           width: 50px;
           padding: 5px;
           color: #ffffff;
           font-size: 12px;
           line-height: 17px;
+          border-radius: 2px;
         }
         .add {
           font-weight: 600;
@@ -227,31 +229,33 @@ export default {
             background-color: #cb1515;
           }
         }
-        > select {
-          width: 80px;
-          text-align: center;
-          font-size: 14px;
-          line-height: 19px;
-          color: #cb1515;
+        .size {
           position: absolute;
           top: 215px;
           left: -100px;
-          padding: 5px;
-          border: none;
-          border-radius: 10px;
-          -webkit-appearance: none;
-          text-indent: 1px;
           transition: all 0.3s;
           z-index: 2;
           opacity: 0;
-          &:focus {
+          > select {
+            width: 80px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 19px;
+            color: #cb1515;
+            padding: 5px;
             border: none;
-            outline: none;
-          }
-          &:hover {
-            cursor: pointer;
-            background-color: green;
-            color: #ffffff;
+            border-radius: 10px;
+            -webkit-appearance: none;
+            text-indent: 1px;
+            &:focus {
+              border: none;
+              outline: none;
+            }
+            &:hover {
+              cursor: pointer;
+              background-color: green;
+              color: #ffffff;
+            }
           }
         }
         .blur-bg {

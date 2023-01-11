@@ -1,17 +1,18 @@
 <template>
   <div>
-    <CommonHeader />
     <HomeBanner />
     <HomeFlashSale />
     <HomeTrending />
     <HomeSale50percent />
     <HomeTradeMark />
     <HomeSuggest />
-    <CommonFooter />
+    <HomeFeedback />
   </div>
 </template>
 <script>
-export default {};
+export default {
+  layout: "default",
+};
 </script>
 <style lang="scss">
 * {

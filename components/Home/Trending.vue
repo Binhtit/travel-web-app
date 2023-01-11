@@ -28,7 +28,7 @@
             <div class="sale">{{ item.sale }}</div>
             <p class="add">
               Thêm vào giỏ
-              <img src="../../assets/images/common/arrow.png" alt="" />
+              <img src="@images/common/arrow.png" alt="" />
             </p>
             <select class="size">
               <option value="xs">Size XS</option>
@@ -46,12 +46,14 @@
 
 <script>
 import { TRENDING } from "../../sources/data";
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
       data_trending: TRENDING,
-      nextLabel: '<div class="label--next">></div>',
-      prevLabel: '<div class="label--prev"><</div>',
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
 };
