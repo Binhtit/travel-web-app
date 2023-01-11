@@ -28,8 +28,13 @@
 
 <script>
 import { BANNER } from "../../sources/data";
+<<<<<<< HEAD
 import arrowLeft from "@images/Common/arrow-left.png";
 import arrowRight from "@images/Common/arrow-right.png";
+=======
+import arrowLeft from "@imagesCommon/arrow-left.png";
+import arrowRight from "@imagesCommon/arrow-right.png";
+>>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
 export default {
   data() {
     return {
@@ -75,6 +80,9 @@ export default {
     background-image: url("@images/banner/banner.png");
     background-size: cover;
     padding: 102px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vw;
     &__wrap {
       .content {
         max-width: 600px;
@@ -96,8 +104,8 @@ export default {
         }
         .describe {
           max-width: 541px;
-          font-size: 14px;
-          line-height: 19px;
+          font-size: 0.9vw;
+          line-height: 1.188vw;
           color: #000000;
           margin: auto;
           margin-bottom: 30px;

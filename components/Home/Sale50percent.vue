@@ -23,7 +23,7 @@
           />
         </div>
       </div>
-      <div class="item" v-if="index % 2 == 1">
+      <div class="item" v-else>
         <div class="image">
           <img
             v-for="(image, index) in item.img"
