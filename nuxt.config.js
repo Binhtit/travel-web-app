@@ -14,6 +14,11 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
+  styleResources: {
+    scss: [
+      '~assets/scss/reset.scss',
+    ],
+  },
 
   alias: {
     '@images': resolve(__dirname, './assets/images'),
