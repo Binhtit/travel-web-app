@@ -16,7 +16,7 @@
               <p class="describe">{{ item.describe }}</p>
               <button class="buynow">
                 Mua ngay
-                <img src="../../assets/images/common/arrow.png" alt="arrow" />
+                <img src="@images/common/arrow.png" alt="arrow" />
               </button>
             </div>
           </div>
@@ -72,7 +72,8 @@ export default {
     }
   }
   .slider {
-    background-image: url("../../assets/images/banner/banner.png");
+    background-image: url("@images/banner/banner.png");
+    background-size: cover;
     padding: 102px 0px;
     background-repeat: no-repeat;
     background-size: cover;
