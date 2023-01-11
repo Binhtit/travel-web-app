@@ -28,13 +28,8 @@
 
 <script>
 import { BANNER } from "../../sources/data";
-<<<<<<< HEAD
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
-=======
 import arrowLeft from "@imagesCommon/arrow-left.png";
 import arrowRight from "@imagesCommon/arrow-right.png";
->>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
 export default {
   data() {
     return {
