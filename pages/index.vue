@@ -1,9 +1,10 @@
 <template>
-  <Header />
+  <div>
+    <AboutUs />
+  </div>
 </template>
 
 <script>
-
 export default {
   name: "IndexPage",
 };
