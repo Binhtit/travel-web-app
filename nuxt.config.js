@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { resolve } from "path";
-=======
-import { resolve } from 'path'
->>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -18,15 +14,9 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-<<<<<<< HEAD
   alias: {
     "@images": resolve(__dirname, "./assets/images"),
-=======
-
-  alias: {
-    '@images': resolve(__dirname, './assets/images'),
-    '@imagesCommon': resolve(__dirname, './assets/images/common')
->>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
+    "@imagesCommon": resolve(__dirname, "./assets/images/common"),
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],

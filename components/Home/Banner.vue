@@ -28,6 +28,7 @@
 
 <script>
 import { BANNER } from "../../sources/data";
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 import arrowLeft from "@images/Common/arrow-left.png";
 import arrowRight from "@images/Common/arrow-right.png";
@@ -35,6 +36,15 @@ import arrowRight from "@images/Common/arrow-right.png";
 import arrowLeft from "@imagesCommon/arrow-left.png";
 import arrowRight from "@imagesCommon/arrow-right.png";
 >>>>>>> 54a1a23a3e8e8399c806dbe39bec92c3907a3bd7
+=======
+<<<<<<< Updated upstream
+import arrowLeft from "@imagesCommon/arrow-left.png";
+import arrowRight from "@imagesCommon/arrow-right.png";
+=======
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 export default {
   data() {
     return {
