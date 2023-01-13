@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6913" data-name="Rectangle 6913" width="40" height="40" transform="translate(1113 1759)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_490" data-name="Mask Group 490" transform="translate(-1113 -1759)" clip-path="url(#clip-path)">
+    <g id="download_21_" data-name="download (21)" transform="translate(1113 1759)">
+      <g id="Group_13591" data-name="Group 13591">
+        <g id="Group_13590" data-name="Group 13590">
+          <path id="Path_14111" data-name="Path 14111" d="M31.742,7.045H29.393a1.174,1.174,0,0,0,0,2.348h2.348a1.174,1.174,0,0,0,0-2.348Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_13593" data-name="Group 13593">
+        <g id="Group_13592" data-name="Group 13592">
+          <path id="Path_14112" data-name="Path 14112" d="M19.876,3,18.7.648A1.174,1.174,0,1,0,16.6,1.7l1.174,2.348A1.174,1.174,0,1,0,19.876,3Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_13595" data-name="Group 13595">
+        <g id="Group_13594" data-name="Group 13594">
+          <path id="Path_14113" data-name="Path 14113" d="M27.57.123a1.177,1.177,0,0,0-1.576.525L24.82,3a1.174,1.174,0,1,0,2.1,1.05L28.1,1.7A1.174,1.174,0,0,0,27.57.123Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_13597" data-name="Group 13597">
+        <g id="Group_13596" data-name="Group 13596">
+          <path id="Path_14114" data-name="Path 14114" d="M15.3,7.045H12.955a1.174,1.174,0,0,0,0,2.348H15.3a1.174,1.174,0,0,0,0-2.348Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_13599" data-name="Group 13599">
+        <g id="Group_13598" data-name="Group 13598">
+          <path id="Path_14115" data-name="Path 14115" d="M8.258,18.865h-4.7a1.174,1.174,0,0,0-1.174,1.174V38.826A1.174,1.174,0,0,0,3.561,40h4.7a1.174,1.174,0,0,0,1.174-1.174V20.039A1.174,1.174,0,0,0,8.258,18.865Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_13601" data-name="Group 13601">
+        <g id="Group_13600" data-name="Group 13600">
+          <path id="Path_14116" data-name="Path 14116" d="M37.589,21.977a3.693,3.693,0,0,0-3.742-3.112H24.693c.778-1.393,1.2-5.333,1.177-6.943a4.889,4.889,0,0,0-4.9-4.8H20A1.174,1.174,0,0,0,18.826,8.3c0,2.715-1.057,7.616-3.051,9.61a13.007,13.007,0,0,1-3.994,2.58V38.106A27.429,27.429,0,0,0,21.466,40h7.681a3.57,3.57,0,0,0,3.521-4.821,3.523,3.523,0,0,0,2.348-4.7,3.524,3.524,0,0,0,1.7-5.747A3.515,3.515,0,0,0,37.589,21.977Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

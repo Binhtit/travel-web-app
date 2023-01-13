@@ -351,3 +351,53 @@ export const INTRODUCE = [
     image: require("../assets/images/AboutUs/gia-tri-cot-loi.png"),
   },
 ]
+
+export const WHYCHOOSE = [
+  {
+    id: 1,
+    title: "Sản phẩm chất lượng",
+    desc: "Sản phẩm tại VMMS là hàng chính hãng, có xuất sứ và giấy tờ chứng minh rõ ràng, đầy đủ.",
+    image: require("../assets/images/AboutUs/brand.svg"),
+  },
+  {
+    id: 2,
+    title: "Giá cả hợp lý",
+    desc: "VMMS cung cấp sản phẩm chất lượng. giá cả tốt nhất, tối ưu cho mọi nhu cầu sử dụng.",
+    image: require("../assets/images/AboutUs/money.svg"),
+  },
+  {
+    id: 3,
+    title: "Đội ngũ chuyên nghiệp",
+    desc: "Chúng tôi luôn hỗ trợ 24/7 để giúp bạn khắc phục các sự cố xảy ra trong thời gian ngắn nhất.",
+    image: require("../assets/images/AboutUs/user.svg"),
+  },
+  {
+    id: 4,
+    title: "Bảo hành uy tín",
+    desc: "Sản phẩm của chúng tôi đều được bảo hành theo quy trình chuẩn và được hỗ trợ tốt nhất.",
+    image: require("../assets/images/AboutUs/like.svg"),
+  }
+]
+
+export const ALBUMS = [
+  {
+    id: 1,
+    title: "Thời trang nam",
+    image: require("../assets/images/AboutUs/thoi-trang-nam.png"),
+  },
+  {
+    id: 2,
+    title: "Thời trang nữ",
+    image: require("../assets/images/AboutUs/thoi-trang-nu.png"),
+  },
+  {
+    id: 3,
+    title: "Phụ kiện",
+    image: require("../assets/images/AboutUs/phu-kien.png"),
+  },
+  {
+    id: 4,
+    title: "Thời trang nữ",
+    image: require("../assets/images/AboutUs/thoi-trang-nu.png"),
+  }
+]

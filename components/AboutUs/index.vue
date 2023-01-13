@@ -3,6 +3,8 @@
     <AboutUsBreadcrumbs />
     <AboutUsFashion />
     <AboutUsIntroduce />
+    <AboutUsWhyChoose />
+    <AboutUsAlbums />
   </div>
 </template>
 
