@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { FEEDBACK } from "../../sources/data";
+import { FEEDBACK } from "@data";
 import arrowLeft from "@images/Common/arrow-left.png";
 import arrowRight from "@images/Common/arrow-right.png";
 export default {

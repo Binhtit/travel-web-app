@@ -24,8 +24,10 @@
               :class="`color color--${color}`"
             ></div>
           </div>
-          <p class="sale">{{ item.sale }}</p>
-          <p class="unavailable">{{ item.unavailable }}</p>
+          <p class="sale" v-if="item.sale">{{ item.sale }}</p>
+          <p class="unavailable" v-if="item.unavailable">
+            {{ item.unavailable }}
+          </p>
           <button class="add" :disabled="item.unavailable == '' ? true : false">
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
@@ -49,7 +51,7 @@
 </template>
 
 <script>
-import { SUGGEST } from "../../sources/data";
+import { SUGGEST } from "@data";
 export default {
   data() {
     return {
