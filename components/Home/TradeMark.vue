@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { TRADEMARK } from "../../sources/data";
+import { TRADEMARK } from "@data";
 import arrowLeft from "@images/Common/arrow-left.png";
 import arrowRight from "@images/Common/arrow-right.png";
 export default {
@@ -49,7 +49,7 @@ export default {
         position: absolute;
         padding: 10px 15px;
         top: -40px;
-        right: -30px;
+        right: -70px;
         font-weight: 900;
         background-color: #ffffff;
         border-radius: 50%;
@@ -62,7 +62,7 @@ export default {
         position: absolute;
         padding: 10px 15px;
         top: -40px;
-        left: -30px;
+        left: -70px;
         font-weight: 900;
         background-color: #ffffff;
         border-radius: 50%;

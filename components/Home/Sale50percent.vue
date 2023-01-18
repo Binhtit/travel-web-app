@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { SALE_50PERCENT } from "../../sources/data";
+import { SALE_50PERCENT } from "@data";
 export default {
   data() {
     return {
@@ -60,6 +60,8 @@ export default {
   padding-bottom: 80px;
   .banner {
     background-image: url("@images/sale50percent/banner.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     padding: 100px 0;
     text-align: center;
     font-style: italic;
@@ -74,7 +76,7 @@ export default {
       justify-content: space-between;
       margin-top: 80px;
       .info {
-        max-width: 350px;
+        max-width: 330px;
         .name {
           font-weight: 600;
           font-size: 32px;

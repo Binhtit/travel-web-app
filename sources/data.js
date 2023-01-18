@@ -325,11 +325,31 @@ export const FEEDBACK = [
     name: "SIMONE PAROTTI",
   },
 ];
+
+export const BLOG = [
+  {
+    img: require("@images/blog/opt1.png"),
+    title: "Bí quyết lên đồ tôn làn da nâu",
+    date: "28 05",
+  },
+  {
+    img: require("@images/blog/opt2.png"),
+    title: "Gợi ý set đồ đi biển hè này",
+    date: "28 05",
+  },
+  {
+    img: require("@images/blog/opt3.png"),
+    title: "Phong cách công sở sang trọng",
+    date: "28 05",
+  },
+];
+
 export const FASHION = {
   title: "THỜI TRANG VMMS",
-  content: "VMMS là thương hiệu thời trang thuộc quyền sở hữu của Công ty Cổ phần dịch vụ Truyền thông Đa phương tiện Việt Nam, được thành lập từ năm 2007 với mục đích ban đầu là hoạt động trong lĩnh vực sản xuất thời trang xuất khẩu với các sản phẩm chủ yếu từ len và sợi. Năm 2015, VMMS có dấu mốc đáng nhớ khi chính thức thành lập chuỗi thời trang VMMS trên toàn quốc. Sản phẩm nổi bật của VMMS đó là thời trang năng động, cá tính và cũng không kém phần sang trọng cho cả nam và nữ. Từ việc lên ý tưởng thiết kế, sản xuất, kiểm duyệt và cho ra sản phẩm cuối cùng, VMMS chú trọng từng chi tiết và công đoạn để có thể mang đến cho khách hàng bộ trang phục đẹp nhất, chất lượng nhất. VMMS hiện đang có hàng chục nghìn khách hàng trung thành trên khắp cả nước, tập trung chủ yếu tại các khu vực miền Bắc và miền Nam. Tạo dựng niềm tin với khách hàng bằng chính chất lượng, mẫu mã, kiểu dáng sản phẩm, dịch vụ chăm sóc khách hàng chính là điểm mấu chốt giúp cho VMMS dễ dàng thấu hiểu những nhu cầu và mong muốn của khách hàng. Chúng tôi mong muốn, với những nỗ lực không ngừng nghỉ, thương hiệu thời trang VMMS sẽ luôn có chỗ đứng trong lòng khách hàng.",
+  content:
+    "VMMS là thương hiệu thời trang thuộc quyền sở hữu của Công ty Cổ phần dịch vụ Truyền thông Đa phương tiện Việt Nam, được thành lập từ năm 2007 với mục đích ban đầu là hoạt động trong lĩnh vực sản xuất thời trang xuất khẩu với các sản phẩm chủ yếu từ len và sợi. Năm 2015, VMMS có dấu mốc đáng nhớ khi chính thức thành lập chuỗi thời trang VMMS trên toàn quốc. Sản phẩm nổi bật của VMMS đó là thời trang năng động, cá tính và cũng không kém phần sang trọng cho cả nam và nữ. Từ việc lên ý tưởng thiết kế, sản xuất, kiểm duyệt và cho ra sản phẩm cuối cùng, VMMS chú trọng từng chi tiết và công đoạn để có thể mang đến cho khách hàng bộ trang phục đẹp nhất, chất lượng nhất. VMMS hiện đang có hàng chục nghìn khách hàng trung thành trên khắp cả nước, tập trung chủ yếu tại các khu vực miền Bắc và miền Nam. Tạo dựng niềm tin với khách hàng bằng chính chất lượng, mẫu mã, kiểu dáng sản phẩm, dịch vụ chăm sóc khách hàng chính là điểm mấu chốt giúp cho VMMS dễ dàng thấu hiểu những nhu cầu và mong muốn của khách hàng. Chúng tôi mong muốn, với những nỗ lực không ngừng nghỉ, thương hiệu thời trang VMMS sẽ luôn có chỗ đứng trong lòng khách hàng.",
   image: require("../assets/images/AboutUs/vmms.png"),
-}
+};
 
 export const INTRODUCE = [
   {
@@ -350,4 +370,4 @@ export const INTRODUCE = [
     desc: "Thời trang VMMS luôn hướng khách hàng đến những trải nghiệm tốt nhất với không gian làm việc sáng tạo, an toàn, thân thiện với môi trường. Ngoài ra, VMMS cũng đang nỗ lực đổi mới mình từ bộ phận chăm sóc khách hàng đến chiến lược mở rộng phát triển lâu dài.",
     image: require("../assets/images/AboutUs/gia-tri-cot-loi.png"),
   },
-]
+];

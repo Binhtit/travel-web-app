@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { BANNER } from "../../sources/data";
+import { BANNER } from "@data";
 import arrowLeft from "@imagesCommon/arrow-left.png";
 import arrowRight from "@imagesCommon/arrow-right.png";
 export default {

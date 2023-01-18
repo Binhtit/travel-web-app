@@ -7,6 +7,8 @@
     <HomeTradeMark />
     <HomeSuggest />
     <HomeFeedback />
+    <HomeBlog />
+    <HomeServices />
   </div>
 </template>
 <script>
