@@ -401,3 +401,61 @@ export const ALBUMS = [
     image: require("../assets/images/AboutUs/thoi-trang-nu.png"),
   }
 ]
+
+export const TEAM = [
+  {
+    id: 1,
+    name: "Nguyễn Thái Hoà",
+    position: "Tổng giám đốc",
+    image: require("../assets/images/AboutUs/team1.png"),
+  },
+  {
+    id: 2,
+    name: "Hà Thu Trang",
+    position: "Trưởng phòng Kinh doanh",
+    image: require("../assets/images/AboutUs/team2.png"),
+  },
+  {
+    id: 3,
+    name: "Hồ Mạnh Quân",
+    position: "Trường phòng Marketing",
+    image: require("../assets/images/AboutUs/team3.png"),
+  },
+  {
+    id: 4,
+    name: "Đặng Bảo Trung",
+    position: "Trưởng phòng Kế toán",
+    image: require("../assets/images/AboutUs/team4.png"),
+  },
+]
+
+export const PARTNER = [
+  {
+    id: 1,
+    logo: require("../assets/images/AboutUs/chanel.png")
+  },
+  {
+    id: 2,
+    logo: require("../assets/images/AboutUs/hermes.png")
+  },
+  {
+    id: 3,
+    logo: require("../assets/images/AboutUs/gucci.png")
+  },
+  {
+    id: 4,
+    logo: require("../assets/images/AboutUs/dg.png")
+  },
+  {
+    id: 5,
+    logo: require("../assets/images/AboutUs/dior.png")
+  },
+  {
+    id: 6,
+    logo: require("../assets/images/AboutUs/lv.png")
+  },
+  {
+    id: 7,
+    logo: require("../assets/images/AboutUs/dg.png")
+  },
+]
