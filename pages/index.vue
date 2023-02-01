@@ -1,9 +1,6 @@
 <template>
   <div>
-    <HomeInfo />
-    <HomeHeader />
-    <HomeNavBar />
-    <HomeBanner />
+  
     
   </div>
 </template>

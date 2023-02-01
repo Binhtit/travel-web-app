@@ -1,5 +1,4 @@
 import Vue from "vue";
-// import "../static/assets/common";
 import BootstrapVue from "bootstrap-vue";
 Vue.use(BootstrapVue);
 import "bootstrap/dist/css/bootstrap.css";
@@ -11,5 +10,3 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
-// import VueAgile from 'vue-agile'
-// Vue.use(VueAgile)
