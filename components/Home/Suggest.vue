@@ -13,6 +13,7 @@
         <p class="opt">Khăn choàng</p>
       </div>
       <div class="clothes">
+        <!-- TODO: init show 8 item. when click btn load more -> add 8 item and then hide btn @nghia -->
         <div class="item" v-for="(item, index) in data_suggest" :key="index">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>

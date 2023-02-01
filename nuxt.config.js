@@ -22,6 +22,7 @@ export default {
     "@images": resolve(__dirname, "./assets/images"),
     "@imagesCommon": resolve(__dirname, "./assets/images/common"),
     "@data": resolve(__dirname, "./sources/data"),
+    '@sources': resolve(__dirname, './sources')
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],
@@ -40,4 +41,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { postcss: null },
+  middleware: 'checkPermision',
+
 };
