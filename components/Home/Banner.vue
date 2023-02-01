@@ -1,174 +1,121 @@
 <template>
-  <div class="section">
-    <agile
-      :autoplay="false"
-      :centerMode='true'
-      :initialSlide="1"
-      :fade="false"
+  <div class="banner">
+    <carousel
+      :perPage="1"
+      :navigationEnabled="true"
+      :navigationNextLabel="nextLabel"
+      :navigationPrevLabel="prevLabel"
+      :paginationActiveColor="'#CB1515'"
     >
-      <div class="banner">
-        <img
-          class="banner__img"
-          src="~assets/images/banner/Untitled-1.png"
-          alt=""
-        >
-        <div class="banner__content ">
-          <p class="sale-off text-center">30% OFF</p>
-          <h2 class="heading text-center">BỘ SƯU TẬP MÙA HÈ 2022</h2>
-          <p class="desc text-center">VMMS đã cho ra mắt bộ sưu tập thời trang mới nhất dành cho phái nữ trong mùa hè 2022 này. Với phối màu sáng làm chủ đạo, bộ sưu tập giúp các quý cô thể hiện cá tính thời trang độc đáo, đầy năng động của mình.</p>
-          <button class="btn-buy">Mua ngay <img
-              src="~assets/images/banner/rigth-arrow.png"
-              alt=""
-            ></button>
+      <slide v-for="(item, index) in data_banner" :key="index">
+        <div class="slider">
+          <div class="slider__wrap container">
+            <div class="content">
+              <p class="sale">{{ item.sale }}</p>
+              <p class="topic">{{ item.topic }}</p>
+              <p class="describe">{{ item.describe }}</p>
+              <button class="buynow">
+                Mua ngay
+                <img src="@images/common/arrow.png" alt="arrow" />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="banner">
-        <img
-          class="banner__img"
-          src="~assets/images/banner/Untitled-1.png"
-          alt=""
-        >
-        <div class="banner__content ">
-          <p class="sale-off text-center">60% OFF</p>
-          <h2 class="heading text-center">BỘ SƯU TẬP MÙA HÈ 2022</h2>
-          <p class="desc text-center">VMMS đã cho ra mắt bộ sưu tập thời trang mới nhất dành cho phái nữ trong mùa hè 2022 này. Với phối màu sáng làm chủ đạo, bộ sưu tập giúp các quý cô thể hiện cá tính thời trang độc đáo, đầy năng động của mình.</p>
-          <button class="btn-buy">Mua ngay <img
-              src="~assets/images/banner/rigth-arrow.png"
-              alt=""
-            ></button>
-        </div>
-      </div>
-      <div class="banner">
-        <img
-          class="banner__img"
-          src="~assets/images/banner/Untitled-1.png"
-          alt=""
-        >
-        <div class="banner__content ">
-          <p class="sale-off text-center">90% OFF</p>
-          <h2 class="heading text-center">BỘ SƯU TẬP MÙA HÈ 2022</h2>
-          <p class="desc text-center">VMMS đã cho ra mắt bộ sưu tập thời trang mới nhất dành cho phái nữ trong mùa hè 2022 này. Với phối màu sáng làm chủ đạo, bộ sưu tập giúp các quý cô thể hiện cá tính thời trang độc đáo, đầy năng động của mình.</p>
-          <button class="btn-buy">Mua ngay <img
-              src="~assets/images/banner/rigth-arrow.png"
-              alt=""
-            ></button>
-        </div>
-      </div>
-      <img
-        slot="prevButton"
-        class="btn-prev"
-        src="~assets/images/banner/arrow left.png"
-      >
-      <img
-        slot="nextButton"
-        class="btn-next"
-        src="~assets/images/banner/arrow right.png"
-      >
-    </agile>
+      </slide>
+    </carousel>
   </div>
 </template>
 
 <script>
-export default {};
+import { BANNER } from "@data";
+import arrowLeft from "@imagesCommon/arrow-left.png";
+import arrowRight from "@imagesCommon/arrow-right.png";
+export default {
+  data() {
+    return {
+      data_banner: BANNER,
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+    };
+  },
+};
 </script>
 
-<style lang="scss" >
-.agile__nav-button {
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background: #ffffff;
-  position: absolute;
-  top: 50%;
-  
-}
-.agile__nav-button--next {
-  right: 68px;
-  transition: all 0.5s;
-  &:hover{
-    background:  #7b655e;
-  }
-}
-.agile__nav-button--prev {
-  left: 68px;
-  transition: all 0.5s;
-  &:hover{
-    background:  #7b655e;
-  }
-}
-.agile__dots {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.agile__dot {
-  margin-right: 5px;
-}
-.agile__dot button {
-  border: 1px solid red;
-  transition: all 0.3s;
-  width: 8px;
-  height: 8px;
-  border-radius: 5px;
-}
-.agile__dot--current button,
-.agile__dot:hover button {
-  background-color: red;
-  scale: 1.5;
-}
-
+<style scoped lang="scss">
 .banner {
-  position: relative;
-  width: 100%;
-  height: 487px;
-  .banner__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 487px;
+  ::v-deep {
+    .label {
+      &--prev {
+        position: absolute;
+        padding: 10px 15px;
+        left: 80px;
+        font-weight: 900;
+        background-color: #ffffff;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover {
+          background-color: lightgreen;
+        }
+      }
+      &--next {
+        position: absolute;
+        padding: 10px 15px;
+        right: 80px;
+        font-weight: 900;
+        background-color: #ffffff;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover {
+          background-color: lightgreen;
+        }
+      }
+    }
   }
-  &__content {
-    width: 541px !important;
-    height: 283px;
-    position: absolute;
-    top: 100px;
-    right: 127px;
-    z-index: 10;
-    .sale-off {
-      color: #cb1515;
-      font-size: 32px;
-      line-height: 43px;
-      font-weight: 300;
-      padding-bottom: 20px;
-    }
-    .heading {
-      color: #000000;
-      font-size: 40px;
-      line-height: 55px;
-      font-weight: 600;
-      padding-bottom: 30px;
-    }
-    .desc {
-      color: #000000;
-      font-size: 14px;
-      line-height: 19px;
-      font-weight: 500;
-      padding-bottom: 30px;
-    }
-    .btn-buy {
-      border: 0;
-      border-radius: 6px;
-      background: #cb1515;
-      display: block;
-      margin: 0 auto;
-      padding: 13px 30px;
-      color: #ffffff;
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 600;
+  .slider {
+    background-image: url("@images/banner/banner.png");
+    background-size: cover;
+    padding: 102px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vw;
+    &__wrap {
+      .content {
+        max-width: 600px;
+        margin-left: auto;
+        text-align: center;
+        .sale {
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 43px;
+          color: #cb1515;
+          margin-bottom: 20px;
+        }
+        .topic {
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 55px;
+          color: #000000;
+          margin-bottom: 30px;
+        }
+        .describe {
+          max-width: 541px;
+          font-size: 0.9vw;
+          line-height: 1.188vw;
+          color: #000000;
+          margin: auto;
+          margin-bottom: 30px;
+        }
+        .buynow {
+          padding: 13px 30px;
+          background-color: #cb1515;
+          color: #ffffff;
+          border-radius: 6px;
+          transition: all 0.3s;
+          &:hover {
+            background-color: green;
+          }
+        }
+      }
     }
   }
 }

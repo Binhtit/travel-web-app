@@ -11,10 +11,6 @@
 <script>
 export default {
   name: "IndexPage",
+  layout: 'default'
 };
 </script>
-<style >
-html {
-  font-family: "Open Sans";
-}
-</style>
