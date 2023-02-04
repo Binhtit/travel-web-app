@@ -14,11 +14,6 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-<<<<<<< HEAD
-  alias: {
-    "@images": resolve(__dirname, "./assets/images"),
-    "@imagesCommon": resolve(__dirname, "./assets/images/common"),
-=======
   styleResources: {
     scss: ["~assets/scss/reset.scss"],
   },
@@ -27,7 +22,6 @@ export default {
     "@images": resolve(__dirname, "./assets/images"),
     "@imagesCommon": resolve(__dirname, "./assets/images/common"),
     "@data": resolve(__dirname, "./sources/data"),
->>>>>>> main
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],
