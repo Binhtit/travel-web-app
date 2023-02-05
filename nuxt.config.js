@@ -59,11 +59,19 @@ styleResources: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [ '@nuxtjs/style-resources',],
+  buildModules: [ '@nuxtjs/style-resources','@nuxtjs/fontawesome'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["bootstrap-vue/nuxt"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { postcss: null },
+
+  //global fontawesome
+  fontawesome: {
+    icons:{
+     solid:true,
+     brands:true
+    }
+   },
 };

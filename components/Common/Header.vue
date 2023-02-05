@@ -104,25 +104,23 @@
                 <span class="menu">Danh mục sản phẩm</span>
               </div>
             </template>
-            <b-dropdown-item
+            <b-dropdown-item 
+            active-class="active" exact
               v-for="item in list"
               :key="item.id"
               :to="item.page"
             >
               <div class="drop-item d-flex align-items-center justify-content-between">
                 <span class="drop-item__text">{{item.prod}}</span>
-                <font-awesome-icon
-                  class="chevron-right"
-                  icon="fa-solid fa-chevron-right"
-                />
+                <font-awesome-icon class="chevron-right" icon="fa-solid fa-chevron-right" />
               </div>
             </b-dropdown-item>
           </b-dropdown>
         </div>
-        <a
+        <nuxt-link to="/home"
           class="home"
           href="#"
-        >Trang chủ</a>
+        >Trang chủ</nuxt-link>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
         <a href="javascript:;" >Sản phẩm</a>
         <a
@@ -162,6 +160,12 @@ export default {
     onLeave() {
       this.$refs.dropdown.visible = false;
     },
+ getAtive(idx){
+  if(idx===1){
+    console.log(1);
+  }
+}    
+  
   },
 };
 </script>
@@ -258,7 +262,7 @@ export default {
         .signin-up {
           grid-column: 2/3;
           grid-row: 2/3;
-          color: #000000;
+          color: $black;
           font-size: 12px;
           line-height: 17px;
           transition: all 0.3s;
@@ -293,7 +297,7 @@ export default {
         .total-cost {
           grid-column: 2/3;
           grid-row: 2/3;
-          color: #000000;
+          color: $black;
           font-size: 12px;
           line-height: 17px;
         }
@@ -310,22 +314,22 @@ export default {
       .btn {
         padding: 0;
       }
-      .btn-secondary {
-        color: #fff;
-        background-color: black;
-        border-color: black;
-        box-shadow: none;
-      }
+      // .btn-secondary {
+      //   color: #fff;
+      //   background-color: black;
+      //   border-color: black;
+      //   box-shadow: none;
+      // }
       .menu__group {
         display: flex;
         width: 255px;
         padding: 15px;
-        background-color: #000000 !important;
+        background-color: $black !important;
         // margin-right: 80px;
         .menu {
           font-size: 14px;
           line-height: 19px;
-          color: #ffffff;
+          color: $white;
           margin-left: 10px;
           cursor: pointer;
         }
@@ -350,13 +354,14 @@ export default {
       }
       .drop-item {
         padding: 15px 15px;
+        margin-bottom: 5px;
         &:hover {
-          background: #000000 0% 0% no-repeat padding-box;
+          background: $black 0% 0% no-repeat padding-box;
           & .drop-item__text {
-            color: #ffffff;
+            color: $white;
           }
           & .chevron-right {
-            color: #ffffff;
+            color: $white;
           }
         }
         .chevron-right {
@@ -366,21 +371,29 @@ export default {
         &__text {
           font-size: 14px;
           line-height: 19px;
-          color: #000000;
+          color: $black;
           font-weight: 600;
         }
       }
+    
       // ul.dropdown-menu.show {
       //   width: 260px;
       // }
       .dropdown-item {
         padding: 0;
+        &.active{
+          background-color: black;
+          color: $white;
+          & .drop-item__text{
+            color: $white;
+          }
+        }
       }
       > a {
         font-weight: 600;
         font-size: 14px;
         line-height: 19px;
-        color: #000000;
+        color: $black;
         transition: all 0.3s;
         &:hover {
           color: red;

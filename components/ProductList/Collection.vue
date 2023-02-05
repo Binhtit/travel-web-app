@@ -15,7 +15,7 @@
         </a>
       </div>
     </div>
-    <div class="collection__item--special">
+    <div class="collection__item--special " >
       <a href="javascript:;"><img
           src="@images/collection/1.jpg"
           alt=""
@@ -26,7 +26,6 @@
           alt=""
         ></button>
     </div>
-
   </div>
 </template>
 
@@ -68,6 +67,8 @@ export default {
         padding-top: 1.5rem;
         color: $black;
         transition: all 0.5;
+        position: relative;
+        
         &:hover{
           text-decoration: underline;
         }
