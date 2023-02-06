@@ -33,6 +33,7 @@ export default {
     "@imagesCommon": resolve(__dirname, "./assets/images/common"),
     "@data": resolve(__dirname, "./sources/data"),
     "@resources": resolve(__dirname, "../../resources"),
+    '@sources': resolve(__dirname, './sources')
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -74,4 +75,6 @@ styleResources: {
      brands:true
     }
    },
+  middleware: 'checkPermision',
+
 };

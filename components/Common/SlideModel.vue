@@ -1,5 +1,6 @@
 <template>
   <section :class="['slide-model', customClass]">
+    <div id="btn" @click="runTmp()"></div>
     <carousel
       class="clothes__wrap"
       :perPage="slidePerView"
@@ -9,7 +10,7 @@
       :paginationEnabled="false"
     >
       <slide v-for="(item, index) in slideData" :key="index">
-        <div class="cloth">
+        <div class="cloth"  @mouseleave="mouseleave()">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -25,14 +26,16 @@
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
           </p>
-          <div class="size">
-            <select>
-              <option value="xs">Size XS</option>
-              <option value="s">Size S</option>
-              <option value="m">Size M</option>
-              <option value="l">Size L</option>
-            </select>
-          </div>
+          <!-- <client-only> -->
+            <div class="size">
+              <select class="mySelect">
+                <option value="xs">Size XS</option>
+                <option value="s">Size S</option>
+                <option value="m">Size M</option>
+                <option value="l">Size L</option>
+              </select>
+            </div>
+          <!-- </client-only> -->
           <div class="blur-bg"></div>
         </div>
       </slide>
@@ -67,6 +70,27 @@ export default {
       nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
       prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
+  },
+  // TODO: refactor @nghia
+  methods: {
+    mouseleave() {
+      // debugger
+      if (document != undefined) {
+        console.log('runnn');
+        let select = document.getElementsByClassName("mySelect")
+        for (let index = 0; index < select.length; index++) {
+          select[index].blur();
+          
+        }
+        console.log('select', select);
+        // console.dir(document.getElementById("btn"))
+        // document.getElementsByTagName("BODY")[0].click()
+        // debugger
+      }
+    },
+    runTmp() {
+      console.log('run clicktmp');
+    }
   },
 };
 </script>
