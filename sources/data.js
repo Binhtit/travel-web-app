@@ -479,4 +479,3 @@ export const PARTNER = [
     logo: require("../assets/images/AboutUs/dg.png")
   },
 ]
-sadsadhasd
