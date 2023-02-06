@@ -47,7 +47,9 @@
           <a class="signin-up" @click="isShowLogin = !isShowLogin"
             >Đăng nhập / Đăng ký</a
           >
+          <!-- TODO: fix lại UI & tách ra component & thêm type cho pass @bao -->
           <div class="form-login" v-show="isShowLogin">
+            <div class="background-blur"></div>
             <div class="inner-form">
               <div class="logo">
                 <img src="../../assets/images/header/brand.png" alt="" />
