@@ -176,10 +176,10 @@
             </b-dropdown-item>
           </b-dropdown>
         </div>
-        <nuxt-link to="/home"
+        <a
           class="home"
           href="#"
-        >Trang chủ</nuxt-link>
+        >Trang chủ</a>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
         <a href="javascript:;" >Sản phẩm</a>
         <a
@@ -221,12 +221,6 @@ export default {
     onLeave() {
       this.$refs.dropdown.visible = false;
     },
- getAtive(idx){
-  if(idx===1){
-    console.log(1);
-  }
-}    
-  
   },
 };
 </script>
@@ -514,7 +508,6 @@ export default {
           font-weight: 600;
         }
       }
-    
       // ul.dropdown-menu.show {
       //   width: 260px;
       // }
