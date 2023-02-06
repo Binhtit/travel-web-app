@@ -13,6 +13,7 @@
         <p class="opt">Khăn choàng</p>
       </div>
       <div class="clothes">
+        <!-- TODO: init show 8 item. when click btn load more -> add 8 item and then hide btn @nghia -->
         <div class="item" v-for="(item, index) in data_suggest" :key="index">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
@@ -24,8 +25,10 @@
               :class="`color color--${color}`"
             ></div>
           </div>
-          <p class="sale">{{ item.sale }}</p>
-          <p class="unavailable">{{ item.unavailable }}</p>
+          <p class="sale" v-if="item.sale">{{ item.sale }}</p>
+          <p class="unavailable" v-if="item.unavailable">
+            {{ item.unavailable }}
+          </p>
           <button class="add" :disabled="item.unavailable == '' ? true : false">
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
@@ -49,7 +52,7 @@
 </template>
 
 <script>
-import { SUGGEST } from "../../sources/data";
+import { SUGGEST } from "@data";
 export default {
   data() {
     return {

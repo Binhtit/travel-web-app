@@ -121,13 +121,13 @@
           <img src="@images/header/menu.png" alt="menu" />
           <p class="menu">Danh mục sản phẩm</p>
         </div>
-        <a class="home" href="#">Trang chủ</a>
-        <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
-        <a class="products" href="#">Sản phẩm</a>
-        <a class="questions" href="#">Câu hỏi thường gặp</a>
-        <a class="support" href="#">Hướng dẫn mua hàng</a>
-        <a class="news" href="#">Tin tức</a>
-        <a class="contact" href="#">Liên hệ</a>
+        <nuxt-link class="home" to="/">Trang chủ</nuxt-link>
+        <nuxt-link class="aboutus" to="/about-us">Về chúng tôi</nuxt-link>
+        <nuxt-link class="products" to="">Sản phẩm</nuxt-link>
+        <nuxt-link class="questions" to="">Câu hỏi thường gặp</nuxt-link>
+        <nuxt-link class="support" to="">Hướng dẫn mua hàng</nuxt-link>
+        <nuxt-link class="news" to="">Tin tức</nuxt-link>
+        <nuxt-link class="contact" to="">Liên hệ</nuxt-link>
       </div>
     </div>
   </header>
