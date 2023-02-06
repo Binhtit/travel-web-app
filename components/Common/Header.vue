@@ -44,7 +44,67 @@
             <img src="@images/header/user.png" alt="user" />
           </button>
           <p class="user">Tài khoản</p>
-          <a class="signin-up" href="#">Đăng nhập / Đăng ký</a>
+          <a class="signin-up" @click="isShowLogin = !isShowLogin"
+            >Đăng nhập / Đăng ký</a
+          >
+          <div class="form-login" v-show="isShowLogin">
+            <div class="inner-form">
+              <div class="logo">
+                <img src="../../assets/images/header/brand.png" alt="" />
+              </div>
+              <form action="">
+                <div class="form-group">
+                  <label class="form-label">Email đăng ký</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Nhập email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Mật khẩu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nhập mật khẩu"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Xác nhận mật khẩu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nhập lại mật khẩu"
+                  />
+                </div>
+                <div class="form-group agree d-flex align-items-center">
+                  <input type="checkbox" name="" id="" checked />
+                  <label class="mb-0" for=""
+                    >Tôi đã đọc và đồng ý <a href="#">Điều khoản sử dụng</a> và
+                    <a href="#">Chính sách bảo mật tại VMMS</a></label
+                  >
+                </div>
+                <div class="form-group">
+                  <button class="btn-login">
+                    Đăng ký
+                    <img
+                      src="../../assets/images/header/button-arrow-right.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+              <p class="had-acc">
+                Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
+              </p>
+              <div class="icon-close" @click="isShowLogin = !isShowLogin">
+                <img src="../../assets/images/header/icon-close.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
         <div class="cart__group">
           <button class="cart__btn">
@@ -74,7 +134,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isShowLogin: false,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -173,9 +239,87 @@ export default {};
           font-size: 12px;
           line-height: 17px;
           transition: all 0.3s;
-
+          cursor: pointer;
           &:hover {
             color: #7d7d7d;
+          }
+        }
+        .form-login {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #2c2c2c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .inner-form {
+            background: #fff;
+            border-radius: 10px;
+            padding: 50px;
+            min-width: 500px;
+            position: relative;
+            .icon-close {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+            .logo {
+              text-align: center;
+              margin-bottom: 30px;
+            }
+            .had-acc {
+              text-align: center;
+              font-size: 14px;
+              color: #7d7d7d;
+              a {
+                color: #000000;
+                margin-left: 10px;
+                text-decoration: underline;
+                font-weight: bold;
+              }
+            }
+            form {
+              .form-group {
+                margin-bottom: 20px;
+                &.agree {
+                  margin-bottom: 30px;
+                  input[type="checkbox"] {
+                    margin-right: 8px;
+                  }
+                  label {
+                    a {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+                .btn-login {
+                  background: #cb1515;
+                  width: 220px;
+                  height: 38px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #fff;
+                  border-radius: 6px;
+                  margin: 0 auto;
+                  font-size: 16px;
+                  img {
+                    margin-left: 5px;
+                  }
+                }
+                label {
+                  font-size: 14px;
+                  margin-bottom: 5px;
+                }
+                input {
+                  border-radius: 6px;
+                }
+              }
+            }
           }
         }
       }

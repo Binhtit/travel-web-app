@@ -370,4 +370,113 @@ export const INTRODUCE = [
     desc: "Thời trang VMMS luôn hướng khách hàng đến những trải nghiệm tốt nhất với không gian làm việc sáng tạo, an toàn, thân thiện với môi trường. Ngoài ra, VMMS cũng đang nỗ lực đổi mới mình từ bộ phận chăm sóc khách hàng đến chiến lược mở rộng phát triển lâu dài.",
     image: require("../assets/images/AboutUs/gia-tri-cot-loi.png"),
   },
-];
+]
+
+export const WHYCHOOSE = [
+  {
+    id: 1,
+    title: "Sản phẩm chất lượng",
+    desc: "Sản phẩm tại VMMS là hàng chính hãng, có xuất sứ và giấy tờ chứng minh rõ ràng, đầy đủ.",
+    image: require("../assets/images/AboutUs/brand.svg"),
+  },
+  {
+    id: 2,
+    title: "Giá cả hợp lý",
+    desc: "VMMS cung cấp sản phẩm chất lượng. giá cả tốt nhất, tối ưu cho mọi nhu cầu sử dụng.",
+    image: require("../assets/images/AboutUs/money.svg"),
+  },
+  {
+    id: 3,
+    title: "Đội ngũ chuyên nghiệp",
+    desc: "Chúng tôi luôn hỗ trợ 24/7 để giúp bạn khắc phục các sự cố xảy ra trong thời gian ngắn nhất.",
+    image: require("../assets/images/AboutUs/user.svg"),
+  },
+  {
+    id: 4,
+    title: "Bảo hành uy tín",
+    desc: "Sản phẩm của chúng tôi đều được bảo hành theo quy trình chuẩn và được hỗ trợ tốt nhất.",
+    image: require("../assets/images/AboutUs/like.svg"),
+  }
+]
+
+export const ALBUMS = [
+  {
+    id: 1,
+    title: "Thời trang nam",
+    image: require("../assets/images/AboutUs/thoi-trang-nam.png"),
+  },
+  {
+    id: 2,
+    title: "Thời trang nữ",
+    image: require("../assets/images/AboutUs/thoi-trang-nu.png"),
+  },
+  {
+    id: 3,
+    title: "Phụ kiện",
+    image: require("../assets/images/AboutUs/phu-kien.png"),
+  },
+  {
+    id: 4,
+    title: "Thời trang nữ",
+    image: require("../assets/images/AboutUs/thoi-trang-nu.png"),
+  }
+]
+
+export const TEAM = [
+  {
+    id: 1,
+    name: "Nguyễn Thái Hoà",
+    position: "Tổng giám đốc",
+    image: require("../assets/images/AboutUs/team1.png"),
+  },
+  {
+    id: 2,
+    name: "Hà Thu Trang",
+    position: "Trưởng phòng Kinh doanh",
+    image: require("../assets/images/AboutUs/team2.png"),
+  },
+  {
+    id: 3,
+    name: "Hồ Mạnh Quân",
+    position: "Trường phòng Marketing",
+    image: require("../assets/images/AboutUs/team3.png"),
+  },
+  {
+    id: 4,
+    name: "Đặng Bảo Trung",
+    position: "Trưởng phòng Kế toán",
+    image: require("../assets/images/AboutUs/team4.png"),
+  },
+]
+
+export const PARTNER = [
+  {
+    id: 1,
+    logo: require("../assets/images/AboutUs/chanel.png")
+  },
+  {
+    id: 2,
+    logo: require("../assets/images/AboutUs/hermes.png")
+  },
+  {
+    id: 3,
+    logo: require("../assets/images/AboutUs/gucci.png")
+  },
+  {
+    id: 4,
+    logo: require("../assets/images/AboutUs/dg.png")
+  },
+  {
+    id: 5,
+    logo: require("../assets/images/AboutUs/dior.png")
+  },
+  {
+    id: 6,
+    logo: require("../assets/images/AboutUs/lv.png")
+  },
+  {
+    id: 7,
+    logo: require("../assets/images/AboutUs/dg.png")
+  },
+]
+sadsadhasd
