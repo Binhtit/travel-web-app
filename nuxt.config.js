@@ -24,7 +24,6 @@ export default {
     scss: [
       "~assets/scss/mixins.scss",
       "~assets/scss/variables.scss",
-  
   ],
   },
 
@@ -63,7 +62,7 @@ styleResources: {
   buildModules: [ '@nuxtjs/style-resources','@nuxtjs/fontawesome'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["bootstrap-vue/nuxt"],
+  modules: ["bootstrap-vue/nuxt", 'nuxt-agile'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { postcss: null },

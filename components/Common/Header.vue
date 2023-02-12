@@ -181,7 +181,7 @@
           href="#"
         >Trang chủ</a>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
-        <a href="javascript:;" >Sản phẩm</a>
+        <a href="javascript:;" active-class="active" exact >Sản phẩm</a>
         <a
           class="questions"
           href="#"
