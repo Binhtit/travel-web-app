@@ -18,13 +18,16 @@ export default {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,500;1,600;1,700&display=swap",
       },
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css",
+      },
     ],
   },
   styleResources: {
     scss: [
       "~assets/scss/mixins.scss",
       "~assets/scss/variables.scss",
-  
   ],
   },
 
@@ -32,7 +35,7 @@ export default {
     "@images": resolve(__dirname, "./assets/images"),
     "@imagesCommon": resolve(__dirname, "./assets/images/common"),
     "@data": resolve(__dirname, "./sources/data"),
-    "@resources": resolve(__dirname, "../../resources"),
+    "@resources": resolve(__dirname, "./resources"),
     '@sources': resolve(__dirname, './sources')
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -63,7 +66,7 @@ styleResources: {
   buildModules: [ '@nuxtjs/style-resources','@nuxtjs/fontawesome'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["bootstrap-vue/nuxt"],
+  modules: ["bootstrap-vue/nuxt", 'nuxt-agile'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { postcss: null },

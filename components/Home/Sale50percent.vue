@@ -76,7 +76,7 @@ export default {
       justify-content: space-between;
       margin-top: 80px;
       .info {
-        max-width: 330px;
+        max-width: 350px;
         .name {
           font-weight: 600;
           font-size: 32px;

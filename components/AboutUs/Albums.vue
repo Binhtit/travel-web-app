@@ -29,14 +29,14 @@
 
 <script>
 import { ALBUMS } from "../../sources/data";
-import arrowLeft from "@imagesCommon/arrow-left.png";
-import arrowRight from "@imagesCommon/arrow-right.png";
+// import arrowLeft from "@imagesCommon/arrow-left.png";
+// import arrowRight from "@imagesCommon/arrow-right.png";
 export default {
   data() {
     return {
       data_albums: ALBUMS,
-      nextLabel: `<div class="btn-nav label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="btn-nav label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      // nextLabel: `<div class="btn-nav label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      // prevLabel: `<div class="btn-nav label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
 };

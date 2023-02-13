@@ -1,13 +1,14 @@
 export const state = () => ({
-    list: [],
+    list: [1,2,3],
     name: '',
   })
   
   export const mutations = {
-    add(state, text) {
-      state.list.push({
-        text
-      })
+    add(state, value) {
+      if (value === null) {
+        return
+      }
+      state.list.push(value)
     },
     remove(state, { todo }) {
       state.list.splice(state.list.indexOf(todo), 1)

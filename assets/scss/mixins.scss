@@ -13,3 +13,8 @@
       @content;
     }
   }
+  @mixin text_14px{
+    font-size: 1.4em;
+    line-height: 1.9rem;
+    color: #7D7D7D;
+  }

@@ -6,10 +6,10 @@
         :key="item.id"
         class="item"
       >
-        <a :href="item.link"> <img
+        <nuxt-link :to="item.linkPage"> <img
             :src=" item.image "
             alt=""
-          ></a>
+          ></nuxt-link>
         <a :href="item.link">
           <p class="title text-center">{{ item.title }}</p>
         </a>
@@ -113,7 +113,7 @@ export default {
     .btn-buyNow {
       position: absolute;
       z-index: 2;
-      bottom: 3rem;
+      bottom: 5rem;
       left: 1.5rem;
       font-size: 1.6em;
       line-height: 22px;

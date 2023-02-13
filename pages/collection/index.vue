@@ -1,13 +1,10 @@
 <template>
-  <Home/>
+  <ProductListCollection />
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
