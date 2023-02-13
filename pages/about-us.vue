@@ -4,7 +4,11 @@
 
 <script>
 export default {
-    middleware: 'authenticated'
+    middleware: 'authenticated',
+  mounted () {
+    console.log('run mounted')
+    this.$store.commit('add', 'new value')
+  },
 }
 </script>
 

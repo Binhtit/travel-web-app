@@ -28,14 +28,14 @@
 
 <script>
 import { BANNER } from "@data";
-import arrowLeft from "@imagesCommon/arrow-left.png";
-import arrowRight from "@imagesCommon/arrow-right.png";
+// import arrowLeft from "@imagesCommon/arrow-left.png";
+// import arrowRight from "@imagesCommon/arrow-right.png";
 export default {
   data() {
     return {
       data_banner: BANNER,
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      // nextLabel: `<div class="label--next"><i class="fa-solid fa-chevron-right"></i></div>`,
+      // prevLabel: `<div class="label--prev"><i class="fa-solid fa-chevron-left"></i></div>`,
     };
   },
 };

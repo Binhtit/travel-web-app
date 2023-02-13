@@ -44,8 +44,8 @@
 </template>
 
 <script>
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
+// import arrowLeft from "@images/Common/arrow-left.png";
+// import arrowRight from "@images/Common/arrow-right.png";
 export default {
   props: {
     slideData: {
@@ -67,8 +67,9 @@ export default {
   },
   data() {
     return {
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+       // TODO: refactor @nghia
+      // nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      // prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
   // TODO: refactor @nghia

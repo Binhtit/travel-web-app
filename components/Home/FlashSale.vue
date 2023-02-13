@@ -19,16 +19,16 @@
 
 <script>
 import { FLASH_SALE } from "@data";
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
+// import arrowLeft from "@images/Common/arrow-left.png";
+// import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
       slidePerView: 4,
       isShowSale: true,
       data_flashsale: FLASH_SALE,
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      // nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      // prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
   methods: {
