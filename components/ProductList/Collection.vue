@@ -5,14 +5,12 @@
         v-for="item in items"
         :key="item.id"
         class="item"
+        @click="handleClick(item.id)"
       >
-        <nuxt-link :to="item.linkPage"> <img
-            :src=" item.image "
-            alt=""
-          ></nuxt-link>
-        <a :href="item.link">
+      <img :src=" item.image " alt="" />
+        <div>
           <p class="title text-center">{{ item.title }}</p>
-        </a>
+        </div>
       </div>
     </div>
     <div class="collection__item--special " >
@@ -30,12 +28,19 @@
 </template>
 
 <script>
-import { DATA_COLLECTION } from "../../resources/product/data-collection";
+import { DATA_COLLECTION } from "@resources/product/data-collection";
 export default {
   data() {
     return {
       items: DATA_COLLECTION,
     };
+  },
+  methods: {
+    handleClick (id) {
+      if (id) {
+        this.$router.push(`category?id=${id}`)
+      }
+    }
   },
 };
 </script>

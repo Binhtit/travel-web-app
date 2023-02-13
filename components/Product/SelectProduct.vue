@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="wrapper-prod  d-flex">
+    <div v-if="currentProduct.id" class="wrapper-prod  d-flex">
       <div class="carousel">
         <button
           @click.prevent="slidePrev"
@@ -54,12 +54,12 @@
         </div>
       </div>
       <div class="select-prod">
-        <h3 class="title">Áo dệt kim cổ tròn mẫu Hàn Quốc</h3>
+        <h3 class="title">{{ currentProduct.name }}</h3>
         <span class="brand">Thương hiệu: <strong class="brand__name">VMMS</strong></span>
         |
         <span class="status">Tình trạng <strong class="status__prod">Còn hàng</strong></span>
         <p class="price">
-          <span class="price__sale">239.000 ₫</span><span class="price__origin">478.000 ₫</span>
+          <span class="price__sale">{{ currentProduct.price }} ₫</span><span class="price__origin">478.000 ₫</span>
         </p>
         <span class="color__text">Màu sắc: <strong class="color__type">{{color}}</strong></span>
         <div class="color__table d-flex">
@@ -119,6 +119,7 @@
         <button class="add__cart">Thêm vào giỏ</button>
       </div>
     </div>
+    <p v-else class="text-center my-2 font-weight-bold">Đang lấy dữ liệu về ...</p>
     <div class="wrapper d-flex align-items-center justify-content-between">
       <div class="sharing">
         <p class="text">Chia sẻ:</p>
@@ -187,6 +188,12 @@ export default {
       number: 0,
       cl_text: 1,
     };
+  },
+  props: {
+    currentProduct: {
+      type: Object,
+      default: {}
+    },
   },
   watch: {
     carouselData() {
