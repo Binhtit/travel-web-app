@@ -115,7 +115,7 @@
             />
           </button>
         </div>
-        <button class="buy__now">Mua ngay</button>
+        <button  class="buy__now">Mua ngay</button>
         <button class="add__cart">Thêm vào giỏ</button>
       </div>
     </div>
@@ -205,11 +205,9 @@ export default {
       this.$refs.carousel.slideNext();
     },
     getChoose(idx) {
-      for (let i = 0; i < 10; ++i) {
-        if (idx === i) {
-          this.active_el = ++i;
-          this.$refs.carousel.slideTo(idx);
-        }
+      if (idx === this.product1[idx].id - 1) {
+        this.active_el = this.product1[idx].id;
+        this.$refs.carousel.slideTo(idx);
       }
     },
     getColor(idx) {
@@ -297,7 +295,7 @@ export default {
           height: 47.4em;
           overflow: hidden;
           .hooper-slide {
-            height: 100%!important;
+            height: 100% !important;
             img {
               cursor: pointer;
               width: 52.5em;

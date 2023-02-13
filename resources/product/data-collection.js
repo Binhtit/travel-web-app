@@ -1,7 +1,7 @@
 export const DATA_COLLECTION=[
     {
         id:1,
-        linkPage:'/product1',
+        linkPage:'collection/product1',
         link:"javascript:;",
         image:require('@images/collection/xuan he 2022.png'),
         title:'Xuân Hè 2022',

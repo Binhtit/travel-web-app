@@ -1,17 +1,19 @@
 <template>
-   <div class="banner">
-      <h2 class="heading text-center">ÁO DỆT TAY CỔ TRÒN MẪU HÀN QUỐC</h2>
-      <p class=" desc text-center"><span class="home"><a href="#">Trang chủ</a></span>
-        / <span class="product"><a href="#">Sản phẩm</a></span> /
-        <span class="product-style">Áo dệt tay cổ tròn mẫu Hàn Quốc</span>
-      </p>
-    </div>
+  <div class="banner">
+    <h2 class="heading text-center">ÁO DỆT TAY CỔ TRÒN MẪU HÀN QUỐC</h2>
+    <p class=" desc text-center"><span class=" desc__link home">
+        <nuxt-link   to="/">Trang chủ</nuxt-link>
+      </span>
+      / <span class=" desc__link product ">
+        <nuxt-link  to="/collection">Sản phẩm</nuxt-link>
+      </span> /
+      <span class=" desc__link product-style">Áo dệt tay cổ tròn mẫu Hàn Quốc</span>
+    </p>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss">
@@ -27,6 +29,16 @@ export default {
   }
   .desc {
     padding-bottom: 8rem;
+    &__link{
+      @include text_14px;
+      transition: all 0.5s;
+      &:hover{
+        text-decoration: underline;
+      }
+      a.nuxt-link-active{
+        color: red;
+      }
+    }
   }
 }
 </style>

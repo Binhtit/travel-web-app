@@ -65,15 +65,22 @@
             />
           </button>
           <p class="user">Tài khoản</p>
-          <a class="signin-up" @click="isShowLogin = !isShowLogin"
-            >Đăng nhập / Đăng ký</a
-          >
+          <a
+            class="signin-up"
+            @click="isShowLogin = !isShowLogin"
+          >Đăng nhập / Đăng ký</a>
           <!-- TODO: fix lại UI & tách ra component & thêm type cho pass @bao -->
-          <div class="form-login" v-show="isShowLogin">
+          <div
+            class="form-login"
+            v-show="isShowLogin"
+          >
             <div class="background-blur"></div>
             <div class="inner-form">
               <div class="logo">
-                <img src="../../assets/images/header/brand.png" alt="" />
+                <img
+                  src="../../assets/images/header/brand.png"
+                  alt=""
+                />
               </div>
               <form action="">
                 <div class="form-group">
@@ -104,11 +111,17 @@
                   />
                 </div>
                 <div class="form-group agree d-flex align-items-center">
-                  <input type="checkbox" name="" id="" checked />
-                  <label class="mb-0" for=""
-                    >Tôi đã đọc và đồng ý <a href="#">Điều khoản sử dụng</a> và
-                    <a href="#">Chính sách bảo mật tại VMMS</a></label
-                  >
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    checked
+                  />
+                  <label
+                    class="mb-0"
+                    for=""
+                  >Tôi đã đọc và đồng ý <a href="#">Điều khoản sử dụng</a> và
+                    <a href="#">Chính sách bảo mật tại VMMS</a></label>
                 </div>
                 <div class="form-group">
                   <button class="btn-login">
@@ -123,8 +136,14 @@
               <p class="had-acc">
                 Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
               </p>
-              <div class="icon-close" @click="isShowLogin = !isShowLogin">
-                <img src="../../assets/images/header/icon-close.png" alt="" />
+              <div
+                class="icon-close"
+                @click="isShowLogin = !isShowLogin"
+              >
+                <img
+                  src="../../assets/images/header/icon-close.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -152,7 +171,6 @@
             id="dropdown-1"
             text="Dropdown Button"
             ref="dropdown"
-          
           >
             <template #button-content>
               <div class="menu__group">
@@ -163,15 +181,18 @@
                 <span class="menu">Danh mục sản phẩm</span>
               </div>
             </template>
-            <b-dropdown-item 
-            active-class="active" exact
+            <b-dropdown-item
+              active-class="active"
               v-for="item in list"
               :key="item.id"
               :to="item.page"
             >
               <div class="drop-item d-flex align-items-center justify-content-between">
                 <span class="drop-item__text">{{item.prod}}</span>
-                <font-awesome-icon class="chevron-right" icon="fa-solid fa-chevron-right" />
+                <font-awesome-icon
+                  class="chevron-right"
+                  icon="fa-solid fa-chevron-right"
+                />
               </div>
             </b-dropdown-item>
           </b-dropdown>
@@ -181,7 +202,7 @@
           href="#"
         >Trang chủ</a>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
-        <a href="javascript:;" active-class="active" exact >Sản phẩm</a>
+        <nuxt-link to="/collection">Sản phẩm</nuxt-link>
         <a
           class="questions"
           href="#"
@@ -211,7 +232,7 @@ export default {
       list: DATA_LIST_PRODUCT,
       listProd: false,
       isShowLogin: false,
-      isShowLogin: false
+      isShowLogin: false,
     };
   },
   methods: {
@@ -513,10 +534,10 @@ export default {
       // }
       .dropdown-item {
         padding: 0;
-        &.active{
+        &.active {
           background-color: black;
           color: $white;
-          & .drop-item__text{
+          & .drop-item__text {
             color: $white;
           }
         }
@@ -530,6 +551,12 @@ export default {
         &:hover {
           color: red;
         }
+      }
+      // a.nuxt-link-exact-active {
+      //   color: red;
+      // }
+      a.nuxt-link-active {
+        color: red;
       }
     }
   }
