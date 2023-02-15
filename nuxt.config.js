@@ -25,10 +25,7 @@ export default {
     ],
   },
   styleResources: {
-    scss: [
-      "~assets/scss/mixins.scss",
-      "~assets/scss/variables.scss",
-  ],
+    scss: ["~assets/scss/mixins.scss", "~assets/scss/variables.scss"],
   },
 
   alias: {
@@ -36,7 +33,7 @@ export default {
     "@imagesCommon": resolve(__dirname, "./assets/images/common"),
     "@data": resolve(__dirname, "./sources/data"),
     "@resources": resolve(__dirname, "./resources"),
-    '@sources': resolve(__dirname, './sources')
+    "@sources": resolve(__dirname, "./sources"),
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -45,13 +42,10 @@ export default {
     // "~assets/scss/variable",
     // "~assets/scss/mixin",
   ],
-// Global scss
-styleResources: {
-  scss: [
-    '~assets/scss/variables.scss',
-    '~assets/scss/mixins.scss'
-  ],
-},
+  // Global scss
+  styleResources: {
+    scss: ["~assets/scss/variables.scss", "~assets/scss/mixins.scss"],
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ["@/plugins/dependencies"],
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],
@@ -63,21 +57,20 @@ styleResources: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [ '@nuxtjs/style-resources','@nuxtjs/fontawesome'],
+  buildModules: ["@nuxtjs/style-resources", "@nuxtjs/fontawesome"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["bootstrap-vue/nuxt", 'nuxt-agile'],
+  modules: ["bootstrap-vue/nuxt", "nuxt-agile"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { postcss: null },
 
   //global fontawesome
   fontawesome: {
-    icons:{
-     solid:true,
-     brands:true
-    }
-   },
-  middleware: 'checkPermision',
-
+    icons: {
+      solid: true,
+      brands: true,
+    },
+  },
+  middleware: "checkPermision",
 };

@@ -1,28 +1,23 @@
 <template>
   <header class="header">
     <div class="header__top">
-      <div class="top__wrap container">
+      <div
+        class="top__wrap container"
+        v-for="(item, index) in data_common"
+        :key="index"
+      >
         <div class="phone__group">
-          <img
-            src="@images/header/phone.png"
-            alt="phone_icon"
-          />
-          <p class="phone">0962.180.180</p>
+          <img src="@images/header/phone.png" alt="phone_icon" />
+          <p class="phone">{{ item.phoneHeader }}</p>
         </div>
         <div class="mail__group">
-          <img
-            src="@images/header/mail.png"
-            alt="mail_icon"
-          />
-          <p class="mail">info@vmms.vn</p>
+          <img src="@images/header/mail.png" alt="mail_icon" />
+          <p class="mail">{{ item.mail }}</p>
         </div>
         <div class="time__group">
-          <img
-            src="@images/header/clock.png"
-            alt="clock_icon"
-          />
+          <img src="@images/header/clock.png" alt="clock_icon" />
           <p class="time">
-            Mở cửa: Từ 8:00 đến 20:30 (Tất cả các ngày trong tuần)
+            {{ item.timeOpen }}
           </p>
         </div>
         <div class="language__group">
@@ -35,14 +30,8 @@
     </div>
     <div class="header__mid">
       <div class="mid__wrap container">
-        <a
-          href="/"
-          class="brand"
-        >
-          <img
-            src="@images/header/brand.png"
-            alt="logo_brand"
-          />
+        <a href="/" class="brand">
+          <img src="@images/header/brand.png" alt="logo_brand" />
         </a>
         <div class="search__group">
           <input
@@ -51,36 +40,23 @@
             placeholder="Nhập từ khóa tìm kiếm..."
           />
           <button class="search__btn">
-            <img
-              src="@images/header/search.png"
-              alt="search"
-            />
+            <img src="@images/header/search.png" alt="search" />
           </button>
         </div>
         <div class="user__group">
           <button class="user__btn">
-            <img
-              src="@images/header/user.png"
-              alt="user"
-            />
+            <img src="@images/header/user.png" alt="user" />
           </button>
           <p class="user">Tài khoản</p>
-          <a
-            class="signin-up"
-            @click="isShowLogin = !isShowLogin"
-          >Đăng nhập / Đăng ký</a>
-          <!-- TODO: fix lại UI & tách ra component & thêm type cho pass @bao -->
-          <div
-            class="form-login"
-            v-show="isShowLogin"
+          <a class="signin-up" @click="isShowLogin = !isShowLogin"
+            >Đăng nhập / Đăng ký</a
           >
+          <!-- TODO: fix lại UI & tách ra component & thêm type cho pass @bao -->
+          <div class="form-login" v-show="isShowLogin">
             <div class="background-blur"></div>
             <div class="inner-form">
               <div class="logo">
-                <img
-                  src="../../assets/images/header/brand.png"
-                  alt=""
-                />
+                <img src="../../assets/images/header/brand.png" alt="" />
               </div>
               <form action="">
                 <div class="form-group">
@@ -111,17 +87,11 @@
                   />
                 </div>
                 <div class="form-group agree d-flex align-items-center">
-                  <input
-                    type="checkbox"
-                    name=""
-                    id=""
-                    checked
-                  />
-                  <label
-                    class="mb-0"
-                    for=""
-                  >Tôi đã đọc và đồng ý <a href="#">Điều khoản sử dụng</a> và
-                    <a href="#">Chính sách bảo mật tại VMMS</a></label>
+                  <input type="checkbox" name="" id="" checked />
+                  <label class="mb-0" for=""
+                    >Tôi đã đọc và đồng ý <a href="#">Điều khoản sử dụng</a> và
+                    <a href="#">Chính sách bảo mật tại VMMS</a></label
+                  >
                 </div>
                 <div class="form-group">
                   <button class="btn-login">
@@ -136,24 +106,15 @@
               <p class="had-acc">
                 Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
               </p>
-              <div
-                class="icon-close"
-                @click="isShowLogin = !isShowLogin"
-              >
-                <img
-                  src="../../assets/images/header/icon-close.png"
-                  alt=""
-                />
+              <div class="icon-close" @click="isShowLogin = !isShowLogin">
+                <img src="../../assets/images/header/icon-close.png" alt="" />
               </div>
             </div>
           </div>
         </div>
         <div class="cart__group">
           <button class="cart__btn">
-            <img
-              src="@images/header/cart.png"
-              alt="cart"
-            />
+            <img src="@images/header/cart.png" alt="cart" />
           </button>
           <p class="cart">Giỏ hàng</p>
           <p class="total-cost">0 đ</p>
@@ -161,11 +122,8 @@
       </div>
     </div>
     <div class="header__bot">
-      <div class="bot__wrap container ">
-        <div
-          @mouseover="onOver()"
-          @mouseleave="onLeave()"
-        >
+      <div class="bot__wrap container">
+        <div @mouseover="onOver()" @mouseleave="onLeave()">
           <b-dropdown
             no-caret
             id="dropdown-1"
@@ -174,10 +132,7 @@
           >
             <template #button-content>
               <div class="menu__group">
-                <img
-                  src="@images/header/menu.png"
-                  alt="menu"
-                />
+                <img src="@images/header/menu.png" alt="menu" />
                 <span class="menu">Danh mục sản phẩm</span>
               </div>
             </template>
@@ -187,8 +142,10 @@
               :key="item.id"
               :to="item.page"
             >
-              <div class="drop-item d-flex align-items-center justify-content-between">
-                <span class="drop-item__text">{{item.prod}}</span>
+              <div
+                class="drop-item d-flex align-items-center justify-content-between"
+              >
+                <span class="drop-item__text">{{ item.prod }}</span>
                 <font-awesome-icon
                   class="chevron-right"
                   icon="fa-solid fa-chevron-right"
@@ -197,28 +154,13 @@
             </b-dropdown-item>
           </b-dropdown>
         </div>
-        <a
-          class="home"
-          href="#"
-        >Trang chủ</a>
+        <a class="home" href="#">Trang chủ</a>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
         <nuxt-link to="/collection">Sản phẩm</nuxt-link>
-        <a
-          class="questions"
-          href="#"
-        >Câu hỏi thường gặp</a>
-        <a
-          class="support"
-          href="#"
-        >Hướng dẫn mua hàng</a>
-        <a
-          class="news"
-          href="#"
-        >Tin tức</a>
-        <a
-          class="contact"
-          href="#"
-        >Liên hệ</a>
+        <a class="questions" href="#">Câu hỏi thường gặp</a>
+        <a class="support" href="#">Hướng dẫn mua hàng</a>
+        <a class="news" href="#">Tin tức</a>
+        <a class="contact" href="#">Liên hệ</a>
       </div>
     </div>
   </header>
@@ -226,9 +168,11 @@
 
 <script>
 import { DATA_LIST_PRODUCT } from "../../resources/navbar/data-listProduct";
+import { COMMON } from "@data";
 export default {
   data() {
     return {
+      data_common: COMMON,
       list: DATA_LIST_PRODUCT,
       listProd: false,
       isShowLogin: false,

@@ -10,7 +10,7 @@
       :paginationEnabled="false"
     >
       <slide v-for="(item, index) in slideData" :key="index">
-        <div class="cloth"  @mouseleave="mouseleave()">
+        <div class="cloth" @mouseleave="mouseleave()">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -27,14 +27,14 @@
             <img src="@images/common/arrow.png" alt="" />
           </p>
           <!-- <client-only> -->
-            <div class="size">
-              <select class="mySelect">
-                <option value="xs">Size XS</option>
-                <option value="s">Size S</option>
-                <option value="m">Size M</option>
-                <option value="l">Size L</option>
-              </select>
-            </div>
+          <div class="size">
+            <select class="mySelect">
+              <option value="xs">Size XS</option>
+              <option value="s">Size S</option>
+              <option value="m">Size M</option>
+              <option value="l">Size L</option>
+            </select>
+          </div>
           <!-- </client-only> -->
           <div class="blur-bg"></div>
         </div>
@@ -44,8 +44,8 @@
 </template>
 
 <script>
-// import arrowLeft from "@images/Common/arrow-left.png";
-// import arrowRight from "@images/Common/arrow-right.png";
+import arrowLeft from "@images/Common/arrow-left.png";
+import arrowRight from "@images/Common/arrow-right.png";
 export default {
   props: {
     slideData: {
@@ -67,9 +67,9 @@ export default {
   },
   data() {
     return {
-       // TODO: refactor @nghia
-      // nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      // prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      // TODO: refactor @nghia
+      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
+      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
   // TODO: refactor @nghia
@@ -77,21 +77,20 @@ export default {
     mouseleave() {
       // debugger
       if (document != undefined) {
-        console.log('runnn');
-        let select = document.getElementsByClassName("mySelect")
+        console.log("runnn");
+        let select = document.getElementsByClassName("mySelect");
         for (let index = 0; index < select.length; index++) {
           select[index].blur();
-          
         }
-        console.log('select', select);
+        console.log("select", select);
         // console.dir(document.getElementById("btn"))
         // document.getElementsByTagName("BODY")[0].click()
         // debugger
       }
     },
     runTmp() {
-      console.log('run clicktmp');
-    }
+      console.log("run clicktmp");
+    },
   },
 };
 </script>

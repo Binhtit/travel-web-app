@@ -1,34 +1,15 @@
 <template>
   <div class="services">
     <div class="services__wrap container">
-      <div class="service">
-        <img src="@images/services/service1.png" alt="" />
+      <div
+        class="service"
+        v-for="(service, index) in data_services"
+        :key="index"
+      >
+        <img :src="service.img" alt="" />
         <div class="info">
-          <p class="name">Miễn phí giao hàng</p>
-          <p class="describe">Áp dụng cho đơn hàng trên 2.000.000 VNĐ</p>
-        </div>
-      </div>
-      <div class="service">
-        <img src="@images/services/service2.png" alt="" />
-        <div class="info">
-          <p class="name">Hỗ trợ đổi trả hàng</p>
-          <p class="describe">
-            Quý khách có thể đổi trả hàng trong vòng 30 ngày
-          </p>
-        </div>
-      </div>
-      <div class="service">
-        <img src="@images/services/service3.png" alt="" />
-        <div class="info">
-          <p class="name">Khách hàng VIP</p>
-          <p class="describe">Nhận ưu đãi lớn khi đăng ký thành viên</p>
-        </div>
-      </div>
-      <div class="service">
-        <img src="@images/services/service4.png" alt="" />
-        <div class="info">
-          <p class="name">Hotline phản ánh</p>
-          <p class="describe">Phản hồi về dịch vụ của VMMS: 0962.180.180</p>
+          <p class="name">{{ service.name }}</p>
+          <p class="describe">{{ service.describe }}</p>
         </div>
       </div>
     </div>
@@ -36,7 +17,14 @@
 </template>
 
 <script>
-export default {};
+import { SERVICES } from "@data";
+export default {
+  data() {
+    return {
+      data_services: SERVICES,
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
