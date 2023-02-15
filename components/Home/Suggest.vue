@@ -13,7 +13,7 @@
         <p class="opt">Khăn choàng</p>
       </div>
       <div class="clothes">
-        <div class="item" v-for="(item, index) in data_suggest" :key="index">
+        <div class="item" v-for="(item, index) in visibleSuggest" :key="index">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -43,8 +43,8 @@
           <div class="blur-bg"></div>
         </div>
       </div>
-      <button class="see-all">
-        Xem tất cả <img src="@images/common/arrow.png" alt="" />
+      <button class="see-all" @click="showMore" v-if="hasMore">
+        Xem thêm <img src="@images/common/arrow.png" alt="" />
       </button>
     </div>
   </div>
@@ -53,10 +53,30 @@
 <script>
 import { SUGGEST } from "@data";
 export default {
+  props: {
+    increment: {
+      type: Number,
+      default: 8,
+    },
+  },
   data() {
     return {
       data_suggest: SUGGEST,
+      visibleCount: this.increment,
     };
+  },
+  computed: {
+    visibleSuggest() {
+      return this.data_suggest.slice(0, this.visibleCount);
+    },
+    hasMore() {
+      return this.visibleCount < this.data_suggest.length;
+    },
+  },
+  methods: {
+    showMore() {
+      this.visibleCount += this.increment;
+    },
   },
 };
 </script>

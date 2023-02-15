@@ -15,17 +15,12 @@
         <div class="follow">
           <p class="title">THEO DÕI CHÚNG TÔI</p>
           <div class="app__group">
-            <nuxt-link class="app" to=""
-              ><img src="@images/common/fb.png" alt=""
-            /></nuxt-link>
-            <nuxt-link class="app" to=""
-              ><img src="@images/common/ig.png" alt=""
-            /></nuxt-link>
-            <nuxt-link class="app" to=""
-              ><img src="@images/common/tt.png" alt=""
-            /></nuxt-link>
-            <nuxt-link class="app" to=""
-              ><img src="@images/common/yt.png" alt=""
+            <nuxt-link
+              class="app"
+              v-for="(item, index) in data_follow"
+              :key="index"
+              :to="item.link"
+              ><img :src="item.img" alt=""
             /></nuxt-link>
           </div>
         </div>
@@ -33,28 +28,28 @@
       <div class="quick-link">
         <p class="title">LIÊN KẾT NHANH</p>
         <div class="link__group">
-          <nuxt-link class="opt text1" to="/">Trang chủ</nuxt-link>
-          <nuxt-link class="opt text1" to="/about-us">Về chúng tôi</nuxt-link>
-          <nuxt-link class="opt text1" to="">Sản phẩm</nuxt-link>
-          <nuxt-link class="opt text1" to="">Câu hỏi thường gặp</nuxt-link>
-          <nuxt-link class="opt text1" to="">Tin tức</nuxt-link>
-          <nuxt-link class="opt text1" to="">Liên hệ</nuxt-link>
+          <nuxt-link
+            class="opt text1"
+            v-for="(item, index) in data_quicklinks"
+            :key="index"
+            :to="item.link"
+            >{{ item.name }}</nuxt-link
+          >
         </div>
       </div>
       <div class="policy">
         <p class="title">CHÍNH SÁCH</p>
         <div class="policy__group">
-          <nuxt-link class="opt text1" to="">Chính sách bảo mật</nuxt-link>
-          <nuxt-link class="opt text1" to="">Chính sách bảo hành</nuxt-link>
-          <nuxt-link class="opt text1" to="">Chính sách đổi trả</nuxt-link>
-          <nuxt-link class="opt text1" to="">Chính sách thanh toán</nuxt-link>
-          <nuxt-link class="opt text1" to="">Chính sách thành viên</nuxt-link>
-          <nuxt-link class="opt text1" to=""
-            >Hướng dẫn mua hàng trực tuyến</nuxt-link
+          <nuxt-link
+            class="opt text1"
+            v-for="(item, index) in data_policys"
+            :key="index"
+            :to="item.link"
+            >{{ item.name }}</nuxt-link
           >
         </div>
       </div>
-      <div class="address">
+      <div class="address" v-for="(item, index) in data_common" :key="index">
         <div class="brand">
           <img src="@images/common/brand.png" alt="" />
         </div>
@@ -65,18 +60,17 @@
         </p>
         <div class="location__group">
           <img src="@images/common/location.png" alt="" />
-          <!-- TODO: cho sdt địa chỉ ... vào data @nghia -->
           <p class="location text2">
-            Tầng 3 số 14 Pháo Đài Láng, Đống Đa, Hà Nội
+            {{ item.location }}
           </p>
         </div>
         <div class="phone__group">
           <img src="@images/common/phone.png" alt="" />
-          <p class="phone text2">(+84-4) 3562.6296</p>
+          <p class="phone text2">{{ item.phoneFooter }}</p>
         </div>
         <div class="mail__group">
           <img src="@images/common/mail.png" alt="" />
-          <p class="mail text2">info@vmms.vn</p>
+          <p class="mail text2">{{ item.mail }}</p>
         </div>
         <div class="notice">
           <img src="@images/common/notice.png" alt="" />
@@ -86,10 +80,26 @@
     </div>
   </div>
 </template>
+
 <script>
+import {
+  COMMON,
+  FOOTER_QUICKLINKS,
+  FOOTER_POLICYS,
+  FOOTER_FOLLOW,
+} from "@data";
 export default {
+  data() {
+    return {
+      data_common: COMMON,
+      data_quicklinks: FOOTER_QUICKLINKS,
+      data_policys: FOOTER_POLICYS,
+      data_follow: FOOTER_FOLLOW,
+    };
+  },
 };
 </script>
+
 <style scoped lang="scss">
 .footer {
   border-top: 5px solid #000000;
