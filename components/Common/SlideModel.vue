@@ -10,7 +10,7 @@
       :paginationEnabled="false"
     >
       <slide v-for="(item, index) in slideData" :key="index">
-        <div class="cloth" @mouseleave="mouseleave()">
+        <div class="cloth" @mouseleave="mouseleave('mySelect')">
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -46,7 +46,9 @@
 <script>
 import arrowLeft from "@images/Common/arrow-left.png";
 import arrowRight from "@images/Common/arrow-right.png";
+import utils from '@mixins/utils'
 export default {
+  mixins: [utils],
   props: {
     slideData: {
       type: Array,
@@ -74,20 +76,6 @@ export default {
   },
   // TODO: refactor @nghia
   methods: {
-    mouseleave() {
-      // debugger
-      if (document != undefined) {
-        console.log("runnn");
-        let select = document.getElementsByClassName("mySelect");
-        for (let index = 0; index < select.length; index++) {
-          select[index].blur();
-        }
-        console.log("select", select);
-        // console.dir(document.getElementById("btn"))
-        // document.getElementsByTagName("BODY")[0].click()
-        // debugger
-      }
-    },
     runTmp() {
       console.log("run clicktmp");
     },

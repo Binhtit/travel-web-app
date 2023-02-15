@@ -34,6 +34,7 @@ export default {
     "@data": resolve(__dirname, "./sources/data"),
     "@resources": resolve(__dirname, "./resources"),
     "@sources": resolve(__dirname, "./sources"),
+    "@mixins": resolve(__dirname, "./mixins"),
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
