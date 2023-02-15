@@ -65,6 +65,7 @@
         </p>
         <div class="location__group">
           <img src="@images/common/location.png" alt="" />
+          <!-- TODO: cho sdt địa chỉ ... vào data @nghia -->
           <p class="location text2">
             Tầng 3 số 14 Pháo Đài Láng, Đống Đa, Hà Nội
           </p>
@@ -86,7 +87,8 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+};
 </script>
 <style scoped lang="scss">
 .footer {

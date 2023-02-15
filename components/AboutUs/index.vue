@@ -3,11 +3,19 @@
     <AboutUsBreadcrumbs />
     <AboutUsFashion />
     <AboutUsIntroduce />
+    <AboutUsWhyChoose />
+    <AboutUsAlbums />
+    <AboutUsCertifications />
+    <AboutUsTeam />
+    <AboutUsPartner />
   </div>
 </template>
 
 <script>
-export default {};
+// import Partner from "./Partner.vue";
+export default {
+  // components: { Partner },
+};
 </script>
 
 <style>

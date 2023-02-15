@@ -28,7 +28,7 @@
           <p class="unavailable" v-if="item.unavailable">
             {{ item.unavailable }}
           </p>
-          <button class="add" :disabled="item.unavailable == '' ? true : false">
+          <button class="add" :disabled="item.unavailable == '' ? false : true">
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
           </button>

@@ -27,15 +27,9 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-import { BANNER } from "../../sources/data";
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
-=======
 import { BANNER } from "@data";
 import arrowLeft from "@imagesCommon/arrow-left.png";
 import arrowRight from "@imagesCommon/arrow-right.png";
->>>>>>> main
 export default {
   data() {
     return {
