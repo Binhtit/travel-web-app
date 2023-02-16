@@ -78,6 +78,55 @@ export const FLASH_SALE = [
     sale: "30% giảm",
     color: ["blue", "pink", "red", "black", "gray"],
   },
+  {
+    img: require("@images/suggest/sample1.png"),
+    name: "Áo thun tay ngắn nữ có hình in",
+    cost: "266.000 đ",
+    sale: "20% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample2.png"),
+    name: "Áo thun tay ngắn cổ cao nữ",
+    cost: "216.000 đ",
+    sale: "10% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample3.png"),
+    name: "Áo thun có cúc tay ngắn nam",
+    cost: "315.000 đ",
+    sale: "50% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample4.png"),
+    name: "Áo thun trơn tay ngắn nam",
+    cost: "246.000 đ",
+    sale: "10% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample5.png"),
+    name: "Áo dệt kim sát nách cổ cao nữ",
+    cost: "374.000 đ",
+    sale: "40% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample6.png"),
+    name: "Áo dệt kim ngắn tay nữ",
+    cost: "413.000 đ",
+    sale: "20% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
+  {
+    img: require("@images/suggest/sample7.png"),
+    name: "Áo thun tay ngắn nam in overall",
+    cost: "315.000 đ",
+    sale: "30% giảm",
+    color: ["brown", "white", "black", "yellow", "green"],
+  },
 ];
 
 export const TRENDING = [

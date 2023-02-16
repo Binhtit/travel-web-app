@@ -10,25 +10,21 @@
         :slide-per-view="slidePerView"
         :slide-data="data_flashsale"
       />
-      <button class="see-all">
-        Xem tất cả <img src="@images/common/arrow.png" alt="" />
-      </button>
+      <nuxt-link to="/flashsale" class="see-all">
+        <span>Xem tất cả <img src="@images/common/arrow.png" alt="" /></span>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
 import { FLASH_SALE } from "@data";
-// import arrowLeft from "@images/Common/arrow-left.png";
-// import arrowRight from "@images/Common/arrow-right.png";
 export default {
   data() {
     return {
       slidePerView: 4,
       isShowSale: true,
       data_flashsale: FLASH_SALE,
-      // nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      // prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
     };
   },
   methods: {
@@ -252,6 +248,7 @@ export default {
       border-radius: 10px;
       background-color: #cb1515;
       color: #ffffff;
+      display: inline-block;
       margin-left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s;
