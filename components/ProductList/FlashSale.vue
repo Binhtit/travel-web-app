@@ -4,6 +4,7 @@
       <img src="@images/flashsale/flash-sale.png" alt="flash sale" />
       <h2 class="title">FLASH SALE</h2>
     </div>
+    <!-- TODO: Click vào item redirect qua page category và hiển thị thông tin detail lên đó @nghia -->
     <div class="clothes__wrap">
       <div
         class="cloth"
