@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <div class="wrapper-prod  d-flex">
+    <div v-if="currentProd.id" class="wrapper-prod  d-flex">
       <div class="carousel">
         <button
           @click.prevent="slidePrev"
           class="btn-up"
-        ><img src="@images/product1/arrow down.svg" /></button>
+        ><img src="@images/product/arrow down.svg" /></button>
         <button
           @click.prevent="slideNext"
           class="btn-down"
-        ><img src="@images/product1/arrow up.svg" /></button>
+        ><img src="@images/product/arrow up.svg" /></button>
         <div class="img-prod">
           <hooper
             ref="carousel"
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="select-prod">
-        <h3 class="title">Áo dệt kim cổ tròn mẫu Hàn Quốc</h3>
+        <h3 class="title">{{currentProd.prodName}}</h3>
         <span class="brand">Thương hiệu: <strong class="brand__name">VMMS</strong></span>
         |
         <span class="status">Tình trạng <strong class="status__prod">Còn hàng</strong></span>
@@ -125,23 +125,23 @@
         <div class="sharing__social d-flex">
           <div class="wrapper-img">
             <img
-              src="@images/product1/fb.svg"
+              src="@images/product/fb.svg"
               alt=""
               class="fb"
             >
           </div>
           <div class="wrapper-img"><img
-              src="@images/product1/ig.svg"
+              src="@images/product/ig.svg"
               alt=""
               class="ig"
             ></div>
           <div class="wrapper-img"><img
-              src="@images/product1/tt.svg"
+              src="@images/product/tt.svg"
               alt=""
               class="twitter"
             ></div>
           <div class="wrapper-img"><img
-              src="@images/product1/printest.svg"
+              src="@images/product/printest.svg"
               alt=""
               class="printerest"
             >
@@ -151,7 +151,7 @@
       <div class="contact-prod d-flex align-items-center justify-content-left">
         <div class="contact__icon">
           <img
-            src="@images/product1/contact.svg"
+            src="@images/product/contact.svg"
             alt="icon"
             class="icon"
           >
@@ -166,18 +166,17 @@
 </template>
 
 <script>
-import { DATA_PRODUCT1 } from "../../resources/product/data-product1";
-import { DATA_COLOR } from "../../resources/product/data-color";
-import { DATA_SIZE } from "../../resources/product/data-size";
+import { DATA_PRODUCT } from "@resources/product/data-product";
+import { DATA_COLOR } from "@resources/product/data-color";
+import { DATA_SIZE } from "@resources/product/data-size";
 
 import { Hooper, Slide } from "hooper";
 export default {
   data() {
     return {
-      product1: DATA_PRODUCT1,
+      product1: DATA_PRODUCT,
       colors: DATA_COLOR,
       sizes: DATA_SIZE,
-      carouselData: 0,
       color: "black",
       size: "size s",
       value: "",
@@ -188,9 +187,10 @@ export default {
       cl_text: 1,
     };
   },
-  watch: {
-    carouselData() {
-      this.$refs.carousel.slideTo(this.carouselData);
+  props: {
+    currentProd: {
+      type: Object,
+      default: {}
     },
   },
   components: {
