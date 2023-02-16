@@ -26,14 +26,13 @@
 
 <script>
 import { TRADEMARK } from "@data";
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
+
 export default {
   data() {
     return {
       data_trademark: TRADEMARK,
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      nextLabel: `<div class="label--next"><i class="fa-solid fa-caret-right arrow"></i></div>`,
+      prevLabel: `<div class="label--prev"><i class="fa-solid fa-caret-left arrow"></i></div>`,
     };
   },
 };
@@ -57,6 +56,9 @@ export default {
         &:hover {
           background-color: lightgreen;
         }
+        .arrow {
+          font-size: 20px;
+        }
       }
       &--prev {
         position: absolute;
@@ -69,6 +71,9 @@ export default {
         transition: all 0.3s;
         &:hover {
           background-color: lightgreen;
+        }
+        .arrow {
+          font-size: 20px;
         }
       }
     }

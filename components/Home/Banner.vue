@@ -28,14 +28,12 @@
 
 <script>
 import { BANNER } from "@data";
-import arrowLeft from "@imagesCommon/arrow-left.png";
-import arrowRight from "@imagesCommon/arrow-right.png";
 export default {
   data() {
     return {
       data_banner: BANNER,
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      nextLabel: `<div class="label--next"><i class="fa-solid fa-caret-right arrow"></i></div>`,
+      prevLabel: `<div class="label--prev"><i class="fa-solid fa-caret-left arrow"></i></div>`,
     };
   },
 };
@@ -56,6 +54,9 @@ export default {
         &:hover {
           background-color: lightgreen;
         }
+        .arrow {
+          font-size: 20px;
+        }
       }
       &--next {
         position: absolute;
@@ -67,6 +68,9 @@ export default {
         transition: all 0.3s;
         &:hover {
           background-color: lightgreen;
+        }
+        .arrow {
+          font-size: 20px;
         }
       }
     }

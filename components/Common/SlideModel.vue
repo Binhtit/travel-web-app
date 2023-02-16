@@ -26,7 +26,6 @@
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
           </p>
-          <!-- <client-only> -->
           <div class="size">
             <select class="mySelect">
               <option value="xs">Size XS</option>
@@ -35,7 +34,6 @@
               <option value="l">Size L</option>
             </select>
           </div>
-          <!-- </client-only> -->
           <div class="blur-bg"></div>
         </div>
       </slide>
@@ -44,9 +42,7 @@
 </template>
 
 <script>
-import arrowLeft from "@images/Common/arrow-left.png";
-import arrowRight from "@images/Common/arrow-right.png";
-import utils from '@mixins/utils'
+import utils from "@mixins/utils";
 export default {
   mixins: [utils],
   props: {
@@ -69,16 +65,9 @@ export default {
   },
   data() {
     return {
-      // TODO: refactor @nghia
-      nextLabel: `<div class="label--next"><img src="${arrowRight}" alt="arrow" /></div>`,
-      prevLabel: `<div class="label--prev"><img src="${arrowLeft}" alt="arrow" /></div>`,
+      nextLabel: `<div class="label--next"><i class="fa-solid fa-caret-right arrow"></i></div>`,
+      prevLabel: `<div class="label--prev"><i class="fa-solid fa-caret-left arrow"></i></div>`,
     };
-  },
-  // TODO: refactor @nghia
-  methods: {
-    runTmp() {
-      console.log("run clicktmp");
-    },
   },
 };
 </script>
@@ -98,6 +87,9 @@ export default {
         &:hover {
           background-color: lightgreen;
         }
+        .arrow {
+          font-size: 20px;
+        }
       }
       &--prev {
         position: absolute;
@@ -110,6 +102,9 @@ export default {
         transition: all 0.3s;
         &:hover {
           background-color: lightgreen;
+        }
+        .arrow {
+          font-size: 20px;
         }
       }
     }

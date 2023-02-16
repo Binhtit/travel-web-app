@@ -13,7 +13,12 @@
         <p class="opt">Khăn choàng</p>
       </div>
       <div class="clothes">
-        <div class="item" v-for="(item, index) in visibleSuggest" :key="index" @mouseleave="mouseleave('mySelect2')">
+        <div
+          class="item"
+          v-for="(item, index) in visibleSuggest"
+          :key="index"
+          @mouseleave="mouseleave('mySelect2')"
+        >
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -52,20 +57,14 @@
 
 <script>
 import { SUGGEST } from "@data";
-import utils from '@mixins/utils'
+import utils from "@mixins/utils";
 export default {
   mixins: [utils],
-  //TODO: Vì param này không truyền từ component cha vào nên không được dùng props @nghia
-  props: {
-    increment: {
-      type: Number,
-      default: 8,
-    },
-  },
   data() {
     return {
       data_suggest: SUGGEST,
-      visibleCount: this.increment,
+      visibleCount: 8,
+      increment: 8,
     };
   },
   computed: {
