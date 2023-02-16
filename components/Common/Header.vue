@@ -154,7 +154,7 @@
             </b-dropdown-item>
           </b-dropdown>
         </div>
-        <a class="home" href="#">Trang chủ</a>
+        <nuxt-link to="/">Trang chủ</nuxt-link>
         <nuxt-link to="/about-us">Về chúng tôi</nuxt-link>
         <nuxt-link to="/collection">Sản phẩm</nuxt-link>
         <a class="questions" href="#">Câu hỏi thường gặp</a>

@@ -1,117 +1,79 @@
 <template>
-  <section :class="['slide-model', customClass]">
-    <div id="btn" @click="runTmp()"></div>
-    <carousel
-      class="clothes__wrap"
-      :perPage="slidePerView"
-      :navigationEnabled="true"
-      :navigationNextLabel="nextLabel"
-      :navigationPrevLabel="prevLabel"
-      :paginationEnabled="false"
-    >
-      <slide v-for="(item, index) in slideData" :key="index">
-        <div class="cloth" @mouseleave="mouseleave('mySelect')">
-          <img :src="item.img" alt="" />
-          <p class="name">{{ item.name }}</p>
-          <p class="cost">{{ item.cost }}</p>
-          <div class="choose-color">
-            <div
-              v-for="(color, index) in item.color"
-              :key="index"
-              :class="`color color--${color}`"
-            ></div>
-          </div>
-          <div v-if="isShowSale" class="sale">{{ item.sale }}</div>
-          <p class="add">
-            Thêm vào giỏ
-            <img src="@images/common/arrow.png" alt="" />
-          </p>
-          <div class="size">
-            <select class="mySelect">
-              <option value="xs">Size XS</option>
-              <option value="s">Size S</option>
-              <option value="m">Size M</option>
-              <option value="l">Size L</option>
-            </select>
-          </div>
-          <div class="blur-bg"></div>
+  <div class="flash-sale container">
+    <div class="title__wrap">
+      <img src="@images/flashsale/flash-sale.png" alt="flash sale" />
+      <h2 class="title">FLASH SALE</h2>
+    </div>
+    <div class="clothes__wrap">
+      <div
+        class="cloth"
+        v-for="(item, index) in data_flashsale"
+        :key="index"
+        @mouseleave="mouseleave('mySelect')"
+      >
+        <img :src="item.img" alt="" />
+        <p class="name">{{ item.name }}</p>
+        <p class="cost">{{ item.cost }}</p>
+        <div class="choose-color">
+          <div
+            v-for="(color, index) in item.color"
+            :key="index"
+            :class="`color color--${color}`"
+          ></div>
         </div>
-      </slide>
-    </carousel>
-  </section>
+        <div v-if="isShowSale" class="sale">{{ item.sale }}</div>
+        <p class="add">
+          Thêm vào giỏ
+          <img src="@images/common/arrow.png" alt="" />
+        </p>
+        <div class="size">
+          <select class="mySelect">
+            <option value="xs">Size XS</option>
+            <option value="s">Size S</option>
+            <option value="m">Size M</option>
+            <option value="l">Size L</option>
+          </select>
+        </div>
+        <div class="blur-bg"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import { FLASH_SALE } from "@data";
 import utils from "@mixins/utils";
 export default {
   mixins: [utils],
-  props: {
-    slideData: {
-      type: Array,
-      default: [],
-    },
-    slidePerView: {
-      type: Number,
-      default: 4,
-    },
-    isShowSale: {
-      type: Boolean,
-      default: true,
-    },
-    customClass: {
-      type: String,
-      default: "",
-    },
-  },
   data() {
     return {
-      nextLabel: `<div class="label--next"><i class="fa-solid fa-caret-right arrow"></i></div>`,
-      prevLabel: `<div class="label--prev"><i class="fa-solid fa-caret-left arrow"></i></div>`,
+      data_flashsale: FLASH_SALE,
     };
   },
 };
 </script>
+
 <style scoped lang="scss">
-.slide-model {
-  ::v-deep {
-    .label {
-      &--next {
-        position: absolute;
-        padding: 10px 15px;
-        top: -70px;
-        right: -70px;
-        font-weight: 900;
-        background-color: #ffffff;
-        border-radius: 50%;
-        transition: all 0.3s;
-        &:hover {
-          background-color: lightgreen;
-        }
-        .arrow {
-          font-size: 20px;
-        }
-      }
-      &--prev {
-        position: absolute;
-        padding: 10px 15px;
-        top: -70px;
-        left: -70px;
-        font-weight: 900;
-        background-color: #ffffff;
-        border-radius: 50%;
-        transition: all 0.3s;
-        &:hover {
-          background-color: lightgreen;
-        }
-        .arrow {
-          font-size: 20px;
-        }
-      }
+.flash-sale {
+  padding: 50px 0;
+  .title__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    .title {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 43px;
+      color: #cb1515;
+      margin-left: 5px;
     }
   }
   .clothes__wrap {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 255px 255px 255px 255px;
+    column-gap: calc((100% - 255px * 4) / 3);
+    row-gap: 30px;
     margin-bottom: 30px;
     .cloth {
       width: 255px;
@@ -215,9 +177,9 @@ export default {
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
-        padding: 8px;
+        padding: 5px;
         position: absolute;
-        top: 205px;
+        top: 210px;
         right: -200px;
         border: 1px solid #ffffff;
         border-radius: 10px;
@@ -231,7 +193,7 @@ export default {
       }
       .size {
         position: absolute;
-        top: 207px;
+        top: 215px;
         left: -100px;
         transition: all 0.3s;
         z-index: 2;
@@ -242,7 +204,7 @@ export default {
           font-size: 14px;
           line-height: 19px;
           color: #cb1515;
-          padding: 8px;
+          padding: 5px;
           border: none;
           border-radius: 10px;
           -webkit-appearance: none;
@@ -269,40 +231,6 @@ export default {
         opacity: 0;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-      }
-    }
-  }
-  &.trending-slide {
-    ::v-deep {
-      .label {
-        &--next {
-          background-color: #f5f5f5;
-        }
-        &--prev {
-          background-color: #f5f5f5;
-        }
-      }
-    }
-    .clothes__wrap {
-      .cloth {
-        width: 350px;
-        &:hover {
-          .add {
-            width: 160px;
-            top: 300px;
-          }
-          .size {
-            top: 302px;
-            > select {
-              width: 160px;
-            }
-          }
-          .blur-bg {
-            width: 350px;
-            height: 350px;
-            border-radius: 10px;
-          }
-        }
       }
     }
   }
