@@ -5,17 +5,16 @@
         v-for="item in items"
         :key="item.id"
         class="item"
+        @click="getRedirect(item.id)"
       >
-        <nuxt-link :to="item.linkPage"> <img
-            :src=" item.image "
-            alt=""
-          ></nuxt-link>
-        <a :href="item.link">
-          <p class="title text-center">{{ item.title }}</p>
-        </a>
+        <img
+          :src=" item.image "
+          alt=""
+        >
+        <p class="title text-center">{{ item.title }}</p>
       </div>
     </div>
-    <div class="collection__item--special " >
+    <div class="collection__item--special ">
       <a href="javascript:;"><img
           src="@images/collection/1.jpg"
           alt=""
@@ -30,18 +29,24 @@
 </template>
 
 <script>
-import { DATA_COLLECTION } from "../../resources/product/data-collection";
+import { DATA_COLLECTION } from "@resources/product/data-collection";
 export default {
   data() {
     return {
       items: DATA_COLLECTION,
     };
   },
+  methods: {
+    getRedirect(id) {
+      if (id) {
+        this.$router.push(`category?id=${id}`);
+      }
+    },
+  },
 };
 </script>
 
 <style  lang="scss">
-
 .collection {
   column-gap: 3em;
   padding-top: 3em;
@@ -68,8 +73,8 @@ export default {
         color: $black;
         transition: all 0.5;
         position: relative;
-        
-        &:hover{
+
+        &:hover {
           text-decoration: underline;
         }
       }
@@ -77,7 +82,7 @@ export default {
   }
   &__item--special {
     position: relative;
-    @include tablet{
+    @include tablet {
       position: unset;
       padding-left: 26rem;
     }
@@ -85,11 +90,11 @@ export default {
       width: 22.5em;
       height: 41.8em;
       border-radius: 1em;
-      @include tablet{
+      @include tablet {
         width: 12.9em;
         height: 12.9em;
       }
-      @include tabletMini{
+      @include tabletMini {
         width: 6.8em;
         height: 6.8em;
       }
@@ -103,7 +108,7 @@ export default {
       z-index: 2;
       bottom: 7.3rem;
       left: 1.5rem;
-      @include tablet{
+      @include tablet {
         font-size: 1.4em;
         line-height: 2.4em;
         color: $black;
@@ -124,19 +129,18 @@ export default {
       border: none;
       font-weight: 600;
       transition: all 0.5;
-      @include tablet{
+      @include tablet {
         display: none;
       }
       img {
         width: 1.5em;
-        height: .8em;
+        height: 0.8em;
         color: $white;
       }
-      &:hover{
+      &:hover {
         opacity: 0.8;
       }
     }
   }
 }
-
 </style>
