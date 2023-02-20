@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ProductBanner />
+  <div >
+    <ProductBanner :currentProd="item" />
     <ProductSelectProduct :currentProd="item" />
     <ProductDescription />
   </div>
@@ -11,7 +11,7 @@ import { DATA_COLLECTION } from "@resources/product/data-collection";
 
 export default {
   props: {
-    idCategory: {
+    id_Category: {
       type: [String, Number],
       default: null,
     },
@@ -23,15 +23,9 @@ export default {
     };
   },
   mounted() {
-    const arr = this.product.filter((i) => {
-      return i.id > 1;
-    });
-    console.log("arr", arr);
     const itemArr = this.product.filter((i) => {
-      return i.id == this.idCategory;
+      return i.id == this.id_Category;
     });
-    console.log("idCategory", this.idCategory);
-    console.log(itemArr);
     if (itemArr.length) {
       this.item = itemArr[0];
     }

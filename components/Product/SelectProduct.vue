@@ -59,7 +59,7 @@
         |
         <span class="status">Tình trạng <strong class="status__prod">Còn hàng</strong></span>
         <p class="price">
-          <span class="price__sale">239.000 ₫</span><span class="price__origin">478.000 ₫</span>
+          <span class="price__sale">{{ currentProd.price }}</span><span class="price__origin">478.000 ₫</span>
         </p>
         <span class="color__text">Màu sắc: <strong class="color__type">{{color}}</strong></span>
         <div class="color__table d-flex">
