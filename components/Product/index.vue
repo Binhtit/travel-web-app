@@ -8,7 +8,6 @@
 
 <script>
 import { DATA_COLLECTION } from "@resources/product/data-collection";
-
 export default {
   props: {
     idCategory: {
@@ -39,5 +38,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

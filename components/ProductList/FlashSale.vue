@@ -4,13 +4,13 @@
       <img src="@images/flashsale/flash-sale.png" alt="flash sale" />
       <h2 class="title">FLASH SALE</h2>
     </div>
-    <!-- TODO: Click vào item redirect qua page category và hiển thị thông tin detail lên đó @nghia -->
     <div class="clothes__wrap">
       <div
         class="cloth"
         v-for="(item, index) in data_flashsale"
         :key="index"
         @mouseleave="mouseleave('mySelect')"
+        @click="getID(item.id)"
       >
         <img :src="item.img" alt="" />
         <p class="name">{{ item.name }}</p>
@@ -22,7 +22,7 @@
             :class="`color color--${color}`"
           ></div>
         </div>
-        <div v-if="isShowSale" class="sale">{{ item.sale }}</div>
+        <div class="sale">{{ item.sale }}</div>
         <p class="add">
           Thêm vào giỏ
           <img src="@images/common/arrow.png" alt="" />
@@ -50,6 +50,13 @@ export default {
     return {
       data_flashsale: FLASH_SALE,
     };
+  },
+  methods: {
+    getID(id) {
+      if (id) {
+        this.$router.push(`productDetails?id=${id}`);
+      }
+    },
   },
 };
 </script>

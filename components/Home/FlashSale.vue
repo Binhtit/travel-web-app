@@ -27,11 +27,6 @@ export default {
       data_flashsale: FLASH_SALE,
     };
   },
-  methods: {
-    addList() {
-      this.$store.commit("add", "new list");
-    },
-  },
 };
 </script>
 
