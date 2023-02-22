@@ -44,4 +44,9 @@ export const DATA_LIST_PRODUCT = [
     prod: "Quần",
     page: "/trousers",
   },
+  {
+    id: 10,
+    prod: "FlashSale",
+    page: "/flashsale",
+  },
 ];

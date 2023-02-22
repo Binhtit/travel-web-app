@@ -10,7 +10,11 @@
       :paginationEnabled="false"
     >
       <slide v-for="(item, index) in slideData" :key="index">
-        <div class="cloth" @mouseleave="mouseleave('mySelect')">
+        <div
+          class="cloth"
+          @mouseleave="mouseleave('mySelect')"
+          @click="getID(item.id)"
+        >
           <img :src="item.img" alt="" />
           <p class="name">{{ item.name }}</p>
           <p class="cost">{{ item.cost }}</p>
@@ -68,6 +72,13 @@ export default {
       nextLabel: `<div class="label--next"><i class="fa-solid fa-caret-right arrow"></i></div>`,
       prevLabel: `<div class="label--prev"><i class="fa-solid fa-caret-left arrow"></i></div>`,
     };
+  },
+  methods: {
+    getID(id) {
+      if (id) {
+        this.$router.push(`productDetails?id=${id}`);
+      }
+    },
   },
 };
 </script>
