@@ -1,19 +1,21 @@
 <template>
-  <product :id_Category="idCategory" />
+  <div>
+    <CurrentFlashSale :idProd="idProduct" />
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      idCategory: null,
+      idProduct: null,
     };
   },
   watch: {
     "$route.query": {
       handler: function (value) {
         if (value.id) {
-          this.idCategory = value.id;
+          this.idProduct = value.id;
         }
       },
       deep: true,
@@ -23,4 +25,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang=""></style>

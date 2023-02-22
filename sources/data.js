@@ -37,6 +37,7 @@ export const BANNER = [
 
 export const FLASH_SALE = [
   {
+    id: "FL-0",
     img: require("@images/flashsale/sample1.png"),
     name: "Áo polo phối màu",
     cost: "179.000 đ",
@@ -44,6 +45,7 @@ export const FLASH_SALE = [
     color: ["red", "black", "yellow"],
   },
   {
+    id: "FL-1",
     img: require("@images/flashsale/sample2.png"),
     name: "Áo sơ mi nữ dài tay",
     cost: "239.000 đ",
@@ -51,6 +53,7 @@ export const FLASH_SALE = [
     color: ["blue", "pink", "red", "black", "gray"],
   },
   {
+    id: "FL-2",
     img: require("@images/flashsale/sample3.png"),
     name: "Áo Hoodie nam tay ngắn",
     cost: "280.000 đ",
@@ -58,6 +61,7 @@ export const FLASH_SALE = [
     color: ["black", "brown"],
   },
   {
+    id: "FL-3",
     img: require("@images/flashsale/sample4.png"),
     name: "Áo len dài tay nữ",
     cost: "179.000 đ",
@@ -65,6 +69,7 @@ export const FLASH_SALE = [
     color: ["black", "white"],
   },
   {
+    id: "FL-4",
     img: require("@images/flashsale/sample1.png"),
     name: "Áo polo phối màu",
     cost: "179.000 đ",
@@ -72,6 +77,7 @@ export const FLASH_SALE = [
     color: ["red", "black", "yellow"],
   },
   {
+    id: "FL-5",
     img: require("@images/flashsale/sample2.png"),
     name: "Áo sơ mi nữ dài tay",
     cost: "239.000 đ",
@@ -79,6 +85,7 @@ export const FLASH_SALE = [
     color: ["blue", "pink", "red", "black", "gray"],
   },
   {
+    id: "FL-6",
     img: require("@images/suggest/sample1.png"),
     name: "Áo thun tay ngắn nữ có hình in",
     cost: "266.000 đ",
@@ -86,6 +93,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-7",
     img: require("@images/suggest/sample2.png"),
     name: "Áo thun tay ngắn cổ cao nữ",
     cost: "216.000 đ",
@@ -93,6 +101,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-8",
     img: require("@images/suggest/sample3.png"),
     name: "Áo thun có cúc tay ngắn nam",
     cost: "315.000 đ",
@@ -100,6 +109,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-9",
     img: require("@images/suggest/sample4.png"),
     name: "Áo thun trơn tay ngắn nam",
     cost: "246.000 đ",
@@ -107,6 +117,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-10",
     img: require("@images/suggest/sample5.png"),
     name: "Áo dệt kim sát nách cổ cao nữ",
     cost: "374.000 đ",
@@ -114,6 +125,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-11",
     img: require("@images/suggest/sample6.png"),
     name: "Áo dệt kim ngắn tay nữ",
     cost: "413.000 đ",
@@ -121,6 +133,7 @@ export const FLASH_SALE = [
     color: ["brown", "white", "black", "yellow", "green"],
   },
   {
+    id: "FL-12",
     img: require("@images/suggest/sample7.png"),
     name: "Áo thun tay ngắn nam in overall",
     cost: "315.000 đ",

@@ -1,19 +1,17 @@
 <template>
   <div class="container">
-    <div v-if="currentProd.id" class="wrapper-prod  d-flex">
+    <div v-if="currentProd.id" class="wrapper-prod d-flex">
       <div class="carousel">
-        <button
-          @click.prevent="slidePrev"
-          class="btn-up"
-        ><img src="@images/product/arrow down.svg" /></button>
-        <button
-          @click.prevent="slideNext"
-          class="btn-down"
-        ><img src="@images/product/arrow up.svg" /></button>
+        <button @click.prevent="slidePrev" class="btn-up">
+          <img src="@images/product/arrow down.svg" />
+        </button>
+        <button @click.prevent="slideNext" class="btn-down">
+          <img src="@images/product/arrow up.svg" />
+        </button>
         <div class="img-prod">
           <hooper
             ref="carousel"
-            class="small-img "
+            class="small-img"
             group="1"
             :vertical="true"
             :itemsToShow="6"
@@ -21,101 +19,84 @@
             :infiniteScroll="false"
             :wheelControl="false"
           >
-            <slide
-              v-for="(item , index ) in product1"
-              :key="item.id"
-            >
+            <slide v-for="(item, index) in product1" :key="item.id">
               <img
                 @click.prevent="getChoose(index)"
-                :class="{active:active_el==item.id}"
+                :class="{ active: active_el == item.id }"
                 :src="item.img"
                 alt="img"
-              >
+              />
             </slide>
           </hooper>
 
           <hooper
             ref="carousel_big"
-            class="big-img "
+            class="big-img"
             :vertical="true"
             :wheelControl="false"
             group="1"
           >
-            <slide
-              v-for="item in product1"
-              :key="item.id"
-            >
-              <img
-                :src="item.img_big"
-                alt="img"
-              >
+            <slide v-for="item in product1" :key="item.id">
+              <img :src="item.img_big" alt="img" />
             </slide>
           </hooper>
         </div>
       </div>
       <div class="select-prod">
-        <h3 class="title">{{currentProd.prodName}}</h3>
-        <span class="brand">Thương hiệu: <strong class="brand__name">VMMS</strong></span>
+        <h3 class="title">{{ currentProd.prodName }}</h3>
+        <span class="brand"
+          >Thương hiệu: <strong class="brand__name">VMMS</strong></span
+        >
         |
-        <span class="status">Tình trạng <strong class="status__prod">Còn hàng</strong></span>
+        <span class="status"
+          >Tình trạng <strong class="status__prod">Còn hàng</strong></span
+        >
         <p class="price">
           <span class="price__sale">{{ currentProd.price }}</span><span class="price__origin">478.000 ₫</span>
         </p>
-        <span class="color__text">Màu sắc: <strong class="color__type">{{color}}</strong></span>
+        <span class="color__text"
+          >Màu sắc: <strong class="color__type">{{ color }}</strong></span
+        >
         <div class="color__table d-flex">
           <div
-            v-for=" (item , index ) in colors"
+            v-for="(item, index) in colors"
             :key="item.id"
             class="wrapper__color"
             @click="getColor(index)"
-            :class="{active_border:border_el == item.id}"
+            :class="{ active_border: border_el == item.id }"
           >
-            <div :class=" [item.color, 'type-color']"></div>
+            <div :class="[item.color, 'type-color']"></div>
           </div>
         </div>
-        <span class="size__text">Kích cỡ: <span class="size__type">{{ size }}</span></span>
-        <a
-          href="javascript:;"
-          class="guide"
-        >Hướng dẫn chọn size</a>
+        <span class="size__text"
+          >Kích cỡ: <span class="size__type">{{ size }}</span></span
+        >
+        <a href="javascript:;" class="guide">Hướng dẫn chọn size</a>
         <div class="size__table">
           <div
-            v-for=" ( item , index) in sizes"
+            v-for="(item, index) in sizes"
             @click="getSize(index)"
             :key="item.id"
-            :class="{bg:bg_color==item.id}"
+            :class="{ bg: bg_color == item.id }"
             class="size__type"
           >
-            <p :class="{color_text:cl_text==item.id}">{{ item.size }}</p>
+            <p :class="{ color_text: cl_text == item.id }">{{ item.size }}</p>
           </div>
         </div>
         <p class="number">Số lượng:</p>
         <div class="wrapper__number">
-          <button
-            @click="getDown()"
-            class="decrease"
-          >
+          <button @click="getDown()" class="decrease">
             <font-awesome-icon
               class="decrease__icon"
               icon="fa-solid fa-minus"
             />
           </button>
-          <input
-            type="number"
-            class="number__input"
-            v-model="number"
-          >
-          <button
-            @click="getUp()"
-            class="increase"
-          >
-            <font-awesome-icon
-              class="increase__icon"
-              icon="fa-solid fa-plus"
-            />
+          <input type="number" class="number__input" v-model="number" />
+          <button @click="getUp()" class="increase">
+            <font-awesome-icon class="increase__icon" icon="fa-solid fa-plus" />
           </button>
         </div>
-        <button  class="buy__now">Mua ngay</button>
+        <button class="buy__now">Mua ngay</button>
         <button class="add__cart">Thêm vào giỏ</button>
       </div>
     </div>
@@ -124,40 +105,27 @@
         <p class="text">Chia sẻ:</p>
         <div class="sharing__social d-flex">
           <div class="wrapper-img">
-            <img
-              src="@images/product/fb.svg"
-              alt=""
-              class="fb"
-            >
+            <img src="@images/product/fb.svg" alt="" class="fb" />
           </div>
-          <div class="wrapper-img"><img
-              src="@images/product/ig.svg"
-              alt=""
-              class="ig"
-            ></div>
-          <div class="wrapper-img"><img
-              src="@images/product/tt.svg"
-              alt=""
-              class="twitter"
-            ></div>
-          <div class="wrapper-img"><img
-              src="@images/product/printest.svg"
-              alt=""
-              class="printerest"
-            >
+          <div class="wrapper-img">
+            <img src="@images/product/ig.svg" alt="" class="ig" />
+          </div>
+          <div class="wrapper-img">
+            <img src="@images/product/tt.svg" alt="" class="twitter" />
+          </div>
+          <div class="wrapper-img">
+            <img src="@images/product/printest.svg" alt="" class="printerest" />
           </div>
         </div>
       </div>
       <div class="contact-prod d-flex align-items-center justify-content-left">
         <div class="contact__icon">
-          <img
-            src="@images/product/contact.svg"
-            alt="icon"
-            class="icon"
-          >
+          <img src="@images/product/contact.svg" alt="icon" class="icon" />
         </div>
         <div class="contact-prod__info">
-          <p class="contact-prod__info--timeline">Đặt mua qua hotline (8:00 - 20:30)</p>
+          <p class="contact-prod__info--timeline">
+            Đặt mua qua hotline (8:00 - 20:30)
+          </p>
           <strong class="contact-prod__info--phone-number">0962.180.180</strong>
         </div>
       </div>
@@ -190,7 +158,7 @@ export default {
   props: {
     currentProd: {
       type: Object,
-      default: {}
+      default: {},
     },
   },
   components: {
@@ -236,7 +204,7 @@ export default {
 };
 </script>
 
-<style  lang="scss">
+<style lang="scss">
 .wrapper-prod {
   @include tablet {
     font-size: 8px;
