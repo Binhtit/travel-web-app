@@ -1,5 +1,5 @@
 <template>
-  <product :id="idCategory" />
+  <product :id_Category="idCategory" />
 </template>
 
 <script>
@@ -8,9 +8,6 @@ export default {
     return {
       idCategory: null,
     };
-  },
-  mounted() {
-    console.log(this.idCategory);
   },
   watch: {
     "$route.query": {

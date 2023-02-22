@@ -1,19 +1,26 @@
 <template>
   <div class="banner">
-    <h2 class="heading text-center">ÁO DỆT TAY CỔ TRÒN MẪU HÀN QUỐC</h2>
+    <h2 class="heading text-center">{{currentProd.prodName}}</h2>
     <p class=" desc text-center"><span class=" desc__link home">
         <nuxt-link   to="/">Trang chủ</nuxt-link>
       </span>
       / <span class=" desc__link product ">
         <nuxt-link  to="/collection">Sản phẩm</nuxt-link>
       </span> /
-      <span class=" desc__link product-style">Áo dệt tay cổ tròn mẫu Hàn Quốc</span>
+      <span class=" desc__link product-style">{{currentProd.prodName}}</span>
     </p>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    currentProd: {
+      type: Object,
+      default: {}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
