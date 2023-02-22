@@ -112,13 +112,13 @@
             </div>
           </div>
         </div>
-        <div class="cart__group">
+        <nuxt-link to="/cart" class="cart__group">
           <button class="cart__btn">
             <img src="@images/header/cart.png" alt="cart" />
           </button>
-          <p class="cart">Giỏ hàng</p>
+          <p class="cart">Giỏ hàng: {{ numCard }} sp</p>
           <p class="total-cost">0 đ</p>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="header__bot">
@@ -177,6 +177,7 @@ export default {
       listProd: false,
       isShowLogin: false,
       isShowLogin: false,
+      numCard: 0
     };
   },
   methods: {
@@ -186,6 +187,11 @@ export default {
     onLeave() {
       this.$refs.dropdown.visible = false;
     },
+  },
+  computed: {
+    // name() {
+    //   return this.data 
+    // }
   },
 };
 </script>

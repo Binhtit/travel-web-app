@@ -26,7 +26,7 @@
             ></div>
           </div>
           <div v-if="isShowSale" class="sale">{{ item.sale }}</div>
-          <p class="add">
+          <p class="add" @click.stop="addCart(item)">
             Thêm vào giỏ
             <img src="@images/common/arrow.png" alt="" />
           </p>
@@ -77,6 +77,12 @@ export default {
     getID(id) {
       if (id) {
         this.$router.push(`productDetails?id=${id}`);
+      }
+    },
+    addCart(item) {
+      if (item) {
+        console.log('add cart', item);
+        this.$store.commit('addCart', item)
       }
     },
   },
