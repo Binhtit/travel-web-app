@@ -37,4 +37,27 @@ export const mutations = {
       state.cart.push(value);
     }
   },
+  editNumItem(state, value) {
+    const {id, type} = value
+    if (!state.cart.length || !id || type === undefined) {
+      return
+    }
+    console.log('{id, type}', {id, type});
+    state.cart.map((c) => {
+      if (c.id === id && (type || !type && c.count > 1 )) {
+        type ? c.count ++ : c.count --
+      }
+    })
+  },
+  deleteItem(state, value) {
+    if (!value) {
+      return
+    }
+    console.log('id', value);
+    state.cart.forEach((c, index) => {
+      if (c.id === value) {
+        state.cart.splice(index, 1);
+      }
+    })
+  }
 };
