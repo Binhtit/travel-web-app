@@ -51,7 +51,6 @@
           <a class="signin-up" @click="isShowLogin = !isShowLogin"
             >Đăng nhập / Đăng ký</a
           >
-          <!-- TODO: fix lại UI & tách ra component & thêm type cho pass @bao -->
           <div class="form-login" v-show="isShowLogin">
             <div class="background-blur"></div>
             <div class="inner-form">
@@ -115,8 +114,9 @@
         <nuxt-link to="/cart" class="cart__group">
           <button class="cart__btn">
             <img src="@images/header/cart.png" alt="cart" />
+            <div class="cart-count">{{ numCart }}</div>
           </button>
-          <p class="cart">Giỏ hàng: {{ numCard }} sp</p>
+          <p class="cart">Giỏ hàng: {{ numCart }} sp</p>
           <p class="total-cost">0 đ</p>
         </nuxt-link>
       </div>
@@ -177,7 +177,6 @@ export default {
       listProd: false,
       isShowLogin: false,
       isShowLogin: false,
-      numCard: 0
     };
   },
   methods: {
@@ -189,9 +188,9 @@ export default {
     },
   },
   computed: {
-    // name() {
-    //   return this.data 
-    // }
+    numCart() {
+      return this.$store.state.cart.length;
+    },
   },
 };
 </script>
@@ -385,9 +384,21 @@ export default {
           margin-right: 10px;
           background-color: transparent;
           transition: all 0.3s;
-
+          position: relative;
           &:hover {
             scale: 1.1;
+          }
+          .cart-count {
+            background-color: red;
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            font-size: 15px;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
           }
         }
         .cart {

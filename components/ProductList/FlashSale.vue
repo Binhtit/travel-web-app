@@ -23,12 +23,12 @@
           ></div>
         </div>
         <div class="sale">{{ item.sale }}</div>
-        <p class="add">
+        <p class="add" @click.stop="addCart(item)">
           Thêm vào giỏ
           <img src="@images/common/arrow.png" alt="" />
         </p>
         <div class="size">
-          <select class="mySelect">
+          <select class="mySelect" @click.stop="">
             <option value="xs">Size XS</option>
             <option value="s">Size S</option>
             <option value="m">Size M</option>
