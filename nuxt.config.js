@@ -24,8 +24,8 @@ export default {
     scss: [
       "~assets/scss/mixins.scss",
       "~assets/scss/variables.scss",
-  
-  ],
+
+    ],
   },
 
   alias: {
@@ -42,13 +42,13 @@ export default {
     // "~assets/scss/variable",
     // "~assets/scss/mixin",
   ],
-// Global scss
-styleResources: {
-  scss: [
-    '~assets/scss/variables.scss',
-    '~assets/scss/mixins.scss'
-  ],
-},
+  // Global scss
+  styleResources: {
+    scss: [
+      '~assets/scss/variables.scss',
+      '~assets/scss/mixins.scss'
+    ],
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ["@/plugins/dependencies"],
   css: ["~assets/scss/common.scss", "~assets/scss/reset.scss"],
@@ -60,7 +60,7 @@ styleResources: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [ '@nuxtjs/style-resources','@nuxtjs/fontawesome'],
+  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/fontawesome'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["bootstrap-vue/nuxt"],
@@ -70,11 +70,11 @@ styleResources: {
 
   //global fontawesome
   fontawesome: {
-    icons:{
-     solid:true,
-     brands:true
+    icons: {
+      solid: true,
+      brands: true
     }
-   },
+  },
   middleware: 'checkPermision',
 
 };
